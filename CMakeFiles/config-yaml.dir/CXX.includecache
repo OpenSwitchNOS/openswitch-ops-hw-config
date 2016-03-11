@@ -1,0 +1,35 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform:
+
+/home/davirap/ws/ops-build/src/ops-hw-config/src/config-yaml.cpp
+string
+-
+vector
+-
+map
+-
+fstream
+-
+stdlib.h
+-
+string.h
+-
+yaml-cpp/yaml.h
+/home/davirap/ws/ops-build/src/ops-hw-config/src/yaml-cpp/yaml.h
+config-yaml.h
+/home/davirap/ws/ops-build/src/ops-hw-config/src/config-yaml.h
+
+include/config-yaml.h
+stdbool.h
+-
+i2c.h
+include/i2c.h
+
+include/i2c.h
+stdbool.h
+-

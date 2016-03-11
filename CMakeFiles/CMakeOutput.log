@@ -1,0 +1,278 @@
+The target system is: Linux -  - x86_64
+The host system is: Linux - 3.19.0-51-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc
+Build flags: ;-m64;-march=core2;-mtune=core2;-msse3;-mfpmath=sse;;--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64;;-O;-fno-omit-frame-pointer;;-pipe;-DHALON;-DOPS
+Id flags:
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++
+Build flags: ;-m64;-march=core2;-mtune=core2;-msse3;-mfpmath=sse;;--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64;;-O;-fno-omit-frame-pointer;;-pipe;-fvisibility-inlines-hidden
+Id flags:
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1250185410/fast"
+make -f CMakeFiles/cmTryCompileExec1250185410.dir/build.make CMakeFiles/cmTryCompileExec1250185410.dir/build
+make[1]: Entering directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_progress_report /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1250185410.dir/testCCompiler.c.o
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -DHALON -DOPS    -o CMakeFiles/cmTryCompileExec1250185410.dir/testCCompiler.c.o   -c /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec1250185410
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1250185410.dir/link.txt --verbose=1
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -DHALON -DOPS   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed CMakeFiles/cmTryCompileExec1250185410.dir/testCCompiler.c.o  -o cmTryCompileExec1250185410 -rdynamic
+make[1]: Leaving directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2698459157/fast"
+make -f CMakeFiles/cmTryCompileExec2698459157.dir/build.make CMakeFiles/cmTryCompileExec2698459157.dir/build
+make[1]: Entering directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_progress_report /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -DHALON -DOPS    -o CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o   -c /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec2698459157
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2698459157.dir/link.txt --verbose=1
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -DHALON -DOPS   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2698459157 -rdynamic
+Using built-in specs.
+COLLECT_GCC=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc
+COLLECT_LTO_WRAPPER=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper
+Target: x86_64-openswitch-linux
+Configured with: /ws/openswitch/ops-build-x86/build/tmp/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=x86_64-linux --target=x86_64-openswitch-linux --prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --exec_prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --bindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --sbindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --libexecdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/libexec/x86_64-openswitch-linux --datadir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share --sysconfdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/etc --sharedstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/com --localstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/var --libdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux --includedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --oldincludedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --infodir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/info --mandir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux --enable-clocale=generic --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --disable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=x86_64-openswitch-linux- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-gxx-include-dir=/not/exist/usr/include/c++/4.9.2 --with-sysroot=/not/exist --with-build-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/genericx86-64 --enable-poison-system-directories --with-mpfr=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --with-system-zlib --disable-nls --enable-__cxa_atexit
+Thread model: posix
+gcc version 4.9.2 (GCC)
+COMPILER_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/
+LIBRARY_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/
+COLLECT_GCC_OPTIONS='--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64' '-march=core2' '-mtune=core2' '-mfpmath=sse' '-O' '-fno-omit-frame-pointer' '-pipe' '-D' 'HALON' '-D' 'OPS' '-m64' '-march=core2' '-mtune=core2' '-msse3' '-mfpmath=sse' '-v' '-o' 'cmTryCompileExec2698459157' '-rdynamic'
+ /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/collect2 -plugin /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/liblto_plugin.so -plugin-opt=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRaHdIG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64 --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTryCompileExec2698459157 /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crt1.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crti.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtbegin.o -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtend.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crtn.o
+make[1]: Leaving directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(x86_64-openswitch-linux-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2698459157/fast"]
+  ignore line: [make -f CMakeFiles/cmTryCompileExec2698459157.dir/build.make CMakeFiles/cmTryCompileExec2698459157.dir/build]
+  ignore line: [make[1]: Entering directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp']
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_progress_report /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -DHALON -DOPS    -o CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o   -c /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec2698459157]
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2698459157.dir/link.txt --verbose=1]
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -DHALON -DOPS   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2698459157 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper]
+  ignore line: [Target: x86_64-openswitch-linux]
+  ignore line: [Configured with: /ws/openswitch/ops-build-x86/build/tmp/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=x86_64-linux --target=x86_64-openswitch-linux --prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --exec_prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --bindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --sbindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --libexecdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/libexec/x86_64-openswitch-linux --datadir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share --sysconfdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/etc --sharedstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/com --localstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/var --libdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux --includedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --oldincludedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --infodir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/info --mandir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux --enable-clocale=generic --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --disable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=x86_64-openswitch-linux- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-gxx-include-dir=/not/exist/usr/include/c++/4.9.2 --with-sysroot=/not/exist --with-build-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/genericx86-64 --enable-poison-system-directories --with-mpfr=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --with-system-zlib --disable-nls --enable-__cxa_atexit]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9.2 (GCC) ]
+  ignore line: [COMPILER_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/]
+  ignore line: [LIBRARY_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64' '-march=core2' '-mtune=core2' '-mfpmath=sse' '-O' '-fno-omit-frame-pointer' '-pipe' '-D' 'HALON' '-D' 'OPS' '-m64' '-march=core2' '-mtune=core2' '-msse3' '-mfpmath=sse' '-v' '-o' 'cmTryCompileExec2698459157' '-rdynamic']
+  link line: [ /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/collect2 -plugin /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/liblto_plugin.so -plugin-opt=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRaHdIG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64 --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTryCompileExec2698459157 /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crt1.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crti.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtbegin.o -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtend.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crtn.o]
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccRaHdIG.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2698459157] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crt1.o] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crti.o] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtbegin.o] ==> ignore
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+    arg [-O1] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec2698459157.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtend.o] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2;/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc;/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib;/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2;/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3212337137/fast"
+make -f CMakeFiles/cmTryCompileExec3212337137.dir/build.make CMakeFiles/cmTryCompileExec3212337137.dir/build
+make[1]: Entering directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_progress_report /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3212337137.dir/testCXXCompiler.cxx.o
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++    -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden    -o CMakeFiles/cmTryCompileExec3212337137.dir/testCXXCompiler.cxx.o -c /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec3212337137
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3212337137.dir/link.txt --verbose=1
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++    -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed CMakeFiles/cmTryCompileExec3212337137.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec3212337137 -rdynamic
+make[1]: Leaving directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3133518024/fast"
+make -f CMakeFiles/cmTryCompileExec3133518024.dir/build.make CMakeFiles/cmTryCompileExec3133518024.dir/build
+make[1]: Entering directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_progress_report /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++    -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden    -o CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o -c /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec3133518024
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3133518024.dir/link.txt --verbose=1
+/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++    -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3133518024 -rdynamic
+Using built-in specs.
+COLLECT_GCC=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++
+COLLECT_LTO_WRAPPER=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper
+Target: x86_64-openswitch-linux
+Configured with: /ws/openswitch/ops-build-x86/build/tmp/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=x86_64-linux --target=x86_64-openswitch-linux --prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --exec_prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --bindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --sbindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --libexecdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/libexec/x86_64-openswitch-linux --datadir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share --sysconfdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/etc --sharedstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/com --localstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/var --libdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux --includedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --oldincludedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --infodir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/info --mandir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux --enable-clocale=generic --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --disable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=x86_64-openswitch-linux- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-gxx-include-dir=/not/exist/usr/include/c++/4.9.2 --with-sysroot=/not/exist --with-build-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/genericx86-64 --enable-poison-system-directories --with-mpfr=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --with-system-zlib --disable-nls --enable-__cxa_atexit
+Thread model: posix
+gcc version 4.9.2 (GCC)
+COMPILER_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/
+LIBRARY_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/
+COLLECT_GCC_OPTIONS='--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64' '-march=core2' '-mtune=core2' '-mfpmath=sse' '-O' '-pipe' '-m64' '-march=core2' '-mtune=core2' '-msse3' '-mfpmath=sse' '-O' '-fno-omit-frame-pointer' '-pipe' '-fvisibility-inlines-hidden' '-v' '-o' 'cmTryCompileExec3133518024' '-rdynamic' '-shared-libgcc'
+ /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/collect2 -plugin /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/liblto_plugin.so -plugin-opt=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsHplyP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64 --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTryCompileExec3133518024 /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crt1.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crti.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtbegin.o -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtend.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crtn.o
+make[1]: Leaving directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(x86_64-openswitch-linux-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec3133518024/fast"]
+  ignore line: [make -f CMakeFiles/cmTryCompileExec3133518024.dir/build.make CMakeFiles/cmTryCompileExec3133518024.dir/build]
+  ignore line: [make[1]: Entering directory `/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp']
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_progress_report /home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++    -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden    -o CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o -c /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec3133518024]
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3133518024.dir/link.txt --verbose=1]
+  ignore line: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++    -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden   -m64 -march=core2 -mtune=core2 -msse3 -mfpmath=sse  --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64  -O -fno-omit-frame-pointer  -pipe -fvisibility-inlines-hidden -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3133518024 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/x86_64-openswitch-linux-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper]
+  ignore line: [Target: x86_64-openswitch-linux]
+  ignore line: [Configured with: /ws/openswitch/ops-build-x86/build/tmp/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=x86_64-linux --target=x86_64-openswitch-linux --prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --exec_prefix=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --bindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --sbindir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux --libexecdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/libexec/x86_64-openswitch-linux --datadir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share --sysconfdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/etc --sharedstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/com --localstatedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/var --libdir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux --includedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --oldincludedir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/include --infodir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/info --mandir=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux --enable-clocale=generic --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --disable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=x86_64-openswitch-linux- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-gxx-include-dir=/not/exist/usr/include/c++/4.9.2 --with-sysroot=/not/exist --with-build-sysroot=/ws/openswitch/ops-build-x86/build/tmp/sysroots/genericx86-64 --enable-poison-system-directories --with-mpfr=/ws/openswitch/ops-build-x86/build/tmp/sysroots/x86_64-linux/usr --with-system-zlib --disable-nls --enable-__cxa_atexit]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9.2 (GCC) ]
+  ignore line: [COMPILER_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/]
+  ignore line: [LIBRARY_PATH=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/:/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64' '-march=core2' '-mtune=core2' '-mfpmath=sse' '-O' '-pipe' '-m64' '-march=core2' '-mtune=core2' '-msse3' '-mfpmath=sse' '-O' '-fno-omit-frame-pointer' '-pipe' '-fvisibility-inlines-hidden' '-v' '-o' 'cmTryCompileExec3133518024' '-rdynamic' '-shared-libgcc']
+  link line: [ /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/collect2 -plugin /home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/liblto_plugin.so -plugin-opt=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsHplyP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64 --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTryCompileExec3133518024 /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crt1.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crti.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtbegin.o -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2 -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib -L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtend.o /home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crtn.o]
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../libexec/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccsHplyP.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3133518024] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crt1.o] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crti.o] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtbegin.o] ==> ignore
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib]
+    arg [-L/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib] ==> dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+    arg [-O1] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec3133518024.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2/crtend.o] ==> ignore
+    arg [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/bin/x86_64-openswitch-linux/../../lib/x86_64-openswitch-linux/gcc] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib/../lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/../lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib]
+  collapse library dir [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib] ==> [/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc/x86_64-openswitch-linux/4.9.2;/home/davirap/ws/ops-build/build/tmp/sysroots/x86_64-linux/usr/lib/x86_64-openswitch-linux/gcc;/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/lib;/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib/x86_64-openswitch-linux/4.9.2;/home/davirap/ws/ops-build/build/tmp/sysroots/genericx86-64/usr/lib]
+  implicit fwks: []

@@ -1,0 +1,2 @@
+/home/davirap/ws/ops-build/src/ops-hw-config/tests/CMakeFiles/cfg_yaml_ut.dir
+/home/davirap/ws/ops-build/src/ops-hw-config/CMakeFiles/config-yaml.dir

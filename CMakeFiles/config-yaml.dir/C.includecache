@@ -1,0 +1,39 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform:
+
+/home/davirap/ws/ops-build/src/ops-hw-config/src/i2c.c
+sys/ioctl.h
+-
+errno.h
+-
+fcntl.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+unistd.h
+-
+sys/file.h
+-
+linux/i2c-dev-user.h
+-
+config-yaml.h
+/home/davirap/ws/ops-build/src/ops-hw-config/src/config-yaml.h
+
+include/config-yaml.h
+stdbool.h
+-
+i2c.h
+include/i2c.h
+
+include/i2c.h
+stdbool.h
+-
