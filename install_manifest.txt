@@ -1,0 +1,5 @@
+/usr/lib/libconfig-yaml.so.0.1.0
+/usr/lib/libconfig-yaml.so
+/usr/lib/pkgconfig/ops-config-yaml.pc
+/usr/include/config-yaml.h
+/usr/include/i2c.h
