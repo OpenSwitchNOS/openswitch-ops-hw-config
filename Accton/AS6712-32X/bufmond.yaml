@@ -17,7 +17,7 @@
 #
 #  This YAML file is auto generated for buffer monitoring feature
 #  Buffer Monitoring Counters Description File for Broadcom Family trident ASIC
-#  Switches and number of ports 78 
+#  Switches and number of ports 104 
 cap_mode_current: true
 cap_mode_peak: true
 cap_snapshot_on_threshold_trigger: true
@@ -8766,6 +8766,2918 @@ counters:
   name: ingress-port-priority-group/um-headroom-buffer-count/78/8
 - counter_vendor_specific_info:
     counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/79/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '79'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/79/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/80/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '80'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/80/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/81/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '81'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/81/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/82/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '82'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/82/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/83/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '83'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/83/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/84/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '84'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/84/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/85/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '85'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/85/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/86/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '86'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/86/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/87/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '87'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/87/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/88/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '88'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/88/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/89/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '89'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/89/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/90/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '90'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/90/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/91/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '91'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/91/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/92/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '92'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/92/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/93/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '93'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/93/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/94/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '94'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/94/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/95/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '95'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/95/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/96/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '96'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/96/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/97/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '97'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/97/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/98/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '98'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/98/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/99/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '99'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/99/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/100/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '100'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/100/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/101/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '101'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/101/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/102/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '102'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/102/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/103/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '103'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/103/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/1
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '1'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/2
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '2'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/3
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '3'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/4
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '4'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/5
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '5'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/5
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/6
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '6'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/6
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/7
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '7'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/7
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-share-buffer-count/104/8
+- counter_vendor_specific_info:
+    counter_name: um-headroom-buffer-count
+    port: '104'
+    priority-group: '8'
+    realm: ingress-port-priority-group
+  hw_unit_id: 0
+  name: ingress-port-priority-group/um-headroom-buffer-count/104/8
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
     port: '1'
     realm: ingress-port-service-pool
     service-pool: '1'
@@ -10948,6 +13860,734 @@ counters:
     service-pool: '4'
   hw_unit_id: 0
   name: ingress-port-service-pool/um-share-buffer-count/78/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/79/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/79/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/79/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/79/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/80/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/80/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/80/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/80/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/81/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/81/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/81/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/81/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/82/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/82/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/82/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/82/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/83/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/83/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/83/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/83/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/84/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/84/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/84/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/84/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/85/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/85/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/85/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/85/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/86/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/86/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/86/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/86/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/87/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/87/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/87/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/87/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/88/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/88/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/88/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/88/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/89/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/89/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/89/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/89/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/90/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/90/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/90/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/90/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/91/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/91/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/91/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/91/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/92/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/92/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/92/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/92/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/93/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/93/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/93/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/93/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/94/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/94/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/94/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/94/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/95/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/95/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/95/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/95/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/96/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/96/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/96/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/96/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/97/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/97/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/97/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/97/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/98/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/98/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/98/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/98/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/99/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/99/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/99/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/99/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/100/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/100/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/100/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/100/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/101/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/101/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/101/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/101/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/102/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/102/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/102/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/102/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/103/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/103/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/103/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/103/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: ingress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/104/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: ingress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/104/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: ingress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/104/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: ingress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: ingress-port-service-pool/um-share-buffer-count/104/4
 - counter_vendor_specific_info:
     counter_name: um-share-buffer-count
     realm: ingress-service-pool
@@ -15340,6 +18980,1462 @@ counters:
     service-pool: '4'
   hw_unit_id: 0
   name: egress-port-service-pool/um-share-buffer-count/78/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/79/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/79/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/79/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/79/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/79/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/79/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/79/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '79'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/79/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/80/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/80/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/80/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/80/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/80/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/80/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/80/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '80'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/80/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/81/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/81/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/81/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/81/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/81/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/81/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/81/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '81'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/81/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/82/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/82/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/82/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/82/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/82/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/82/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/82/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '82'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/82/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/83/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/83/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/83/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/83/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/83/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/83/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/83/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '83'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/83/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/84/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/84/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/84/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/84/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/84/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/84/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/84/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '84'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/84/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/85/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/85/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/85/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/85/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/85/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/85/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/85/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '85'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/85/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/86/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/86/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/86/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/86/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/86/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/86/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/86/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '86'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/86/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/87/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/87/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/87/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/87/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/87/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/87/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/87/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '87'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/87/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/88/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/88/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/88/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/88/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/88/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/88/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/88/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '88'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/88/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/89/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/89/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/89/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/89/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/89/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/89/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/89/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '89'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/89/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/90/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/90/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/90/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/90/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/90/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/90/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/90/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '90'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/90/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/91/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/91/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/91/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/91/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/91/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/91/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/91/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '91'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/91/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/92/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/92/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/92/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/92/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/92/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/92/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/92/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '92'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/92/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/93/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/93/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/93/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/93/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/93/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/93/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/93/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '93'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/93/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/94/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/94/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/94/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/94/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/94/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/94/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/94/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '94'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/94/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/95/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/95/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/95/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/95/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/95/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/95/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/95/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '95'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/95/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/96/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/96/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/96/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/96/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/96/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/96/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/96/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '96'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/96/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/97/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/97/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/97/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/97/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/97/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/97/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/97/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '97'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/97/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/98/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/98/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/98/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/98/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/98/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/98/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/98/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '98'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/98/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/99/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/99/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/99/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/99/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/99/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/99/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/99/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '99'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/99/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/100/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/100/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/100/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/100/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/100/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/100/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/100/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '100'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/100/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/101/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/101/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/101/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/101/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/101/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/101/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/101/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '101'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/101/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/102/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/102/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/102/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/102/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/102/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/102/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/102/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '102'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/102/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/103/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/103/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/103/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/103/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/103/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/103/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/103/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '103'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/103/4
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/104/1
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '1'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/104/1
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/104/2
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '2'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/104/2
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/104/3
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '3'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/104/3
+- counter_vendor_specific_info:
+    counter_name: uc-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/uc-share-buffer-count/104/4
+- counter_vendor_specific_info:
+    counter_name: um-share-buffer-count
+    port: '104'
+    realm: egress-port-service-pool
+    service-pool: '4'
+  hw_unit_id: 0
+  name: egress-port-service-pool/um-share-buffer-count/104/4
 - counter_vendor_specific_info:
     counter_name: um-share-buffer-count
     realm: egress-service-pool
