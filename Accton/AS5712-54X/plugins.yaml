@@ -47,3 +47,4 @@
 # phase it should initialize.
 
 - libswitchd_stp_plugin
+- libswitchd_mac_learning_plugin
