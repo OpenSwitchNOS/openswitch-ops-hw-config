@@ -51,3 +51,5 @@ files:
         filename:   qos.yaml
     -   name:       thermal
         filename:   thermal.yaml
+    -   name:       acl
+        filename:   acl.yaml

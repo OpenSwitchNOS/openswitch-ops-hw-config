@@ -64,6 +64,7 @@ extern "C" {
 #define YAML_PORTS_NAME "ports"       /*!< Name to identify ports file */
 #define YAML_POWER_NAME "power"       /*!< Name to identify power file */
 #define YAML_QOS_NAME "qos"           /*!< Name to identify qos file */
+#define YAML_ACL_NAME "acl"           /*!< Name to identify acl file */
 #define YAML_THERMAL_NAME "thermal"   /*!< Name to identify thermal file */
 
 /**
@@ -494,6 +495,16 @@ typedef struct {
 } YamlQosInfo;
 
 /************************************************************************//**
+ * STRUCT that contains the content of the acl_info section of the
+ *    acl.yaml file.
+ ***************************************************************************/
+typedef struct {
+    int    max_acls;            /*!< Maximum acls allowed in system */
+    int    max_aces;            /*!< Maximum aces allowed in system */
+    int    max_aces_per_acl;    /*!< Maximum aces allowed per acl */
+} YamlAclInfo;
+
+/************************************************************************//**
  * TYPEDEF for the opaque Yaml config handle used for each call. The handle
  *    is returned by the yaml_new_config_handle() function.
  ***************************************************************************/
@@ -715,6 +726,16 @@ extern int yaml_parse_psus(YamlConfigHandle handle, const char *subsyst);
  * @return 0 on success, else -1 on failure
  ***************************************************************************/
 extern int yaml_parse_leds(YamlConfigHandle handle, const char *subsyst);
+
+/************************************************************************//**
+ * Parses and stores internally the information in the acl.yaml file
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] subsyst   :Name of the subsystem
+ *
+ * @return 0 on success, else -1 on failure
+ ***************************************************************************/
+extern int yaml_parse_acl(YamlConfigHandle handle, const char *subsyst);
 
 /************************************************************************//**
  * Performs the list of i2c commands for the specified i2c device
@@ -974,6 +995,17 @@ extern const YamlQueueProfileEntry *yaml_get_queue_profile_entry(
                                                      YamlConfigHandle handle,
                                                      const char *subsyst,
                                                      unsigned int idx);
+
+/************************************************************************//**
+ * Returns global ACL parameters for a subsystem.
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] subsyst   :Name of the subsystem
+ *
+ * @return 0 on success, else -1 on failure
+ ***************************************************************************/
+extern YamlAclInfo *yaml_get_acl_info(YamlConfigHandle handle, const char *subsyst);
+
 #ifdef __cplusplus
 };
 #endif
