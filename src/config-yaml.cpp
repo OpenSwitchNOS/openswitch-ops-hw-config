@@ -32,6 +32,7 @@ using namespace std;
 #define QOS_CAPABILITY_DSCP_MAP_COS_REMARK_DISABLED
 
 #define QOS_MAX_STRING_LENGTH 64
+#define ACL_MAX_STRING_LENGTH 64
 
 typedef struct {
     map<string, YamlDevice> device_map;
@@ -65,6 +66,8 @@ typedef struct {
     vector<YamlQueueProfileEntry>    queue_profile_entries;
     vector<YamlCosMapEntry>          cos_map_entries;
     vector<YamlDscpMapEntry>         dscp_map_entries;
+
+    YamlAclInfo             acl_info;
 
     vector<i2c_op>          init_ops;
 
@@ -1057,6 +1060,39 @@ static void operator >> (const YAML::Node &node, vector<YamlDscpMapEntry> &entri
         entries.push_back(entry);
     }
 }
+
+/*======*/
+/* ACL. */
+/*======*/
+static void operator >> (const YAML::Node &node, YamlAclInfo &acl_info)
+{
+    string str;
+
+    node["max_acls"] >> str;
+    acl_info.max_acls = strdup(str.c_str());
+    if (acl_info.max_acls != NULL &&
+            strncmp(acl_info.max_acls, "512", ACL_MAX_STRING_LENGTH) != 0) {
+        std::cout << "config-yaml|ERR|Unexpected maximum ACLs: "
+                << acl_info.max_acls << std::endl;
+    }
+
+    node["max_aces"] >> str;
+    acl_info.max_aces = strdup(str.c_str());
+    if (acl_info.max_aces != NULL &&
+            strncmp(acl_info.max_aces, "1024", ACL_MAX_STRING_LENGTH) != 0) {
+        std::cout << "config-yaml|ERR|Unexpected maximum ACEs: "
+                << acl_info.max_aces << std::endl;
+    }
+
+    node["max_aces_per_acl"] >> str;
+    acl_info.max_aces_per_acl = strdup(str.c_str());
+    if (acl_info.max_aces_per_acl != NULL &&
+            strncmp(acl_info.max_aces_per_acl, "512", ACL_MAX_STRING_LENGTH) != 0) {
+        std::cout << "config-yaml|ERR|Unexpected maximum ACEs per ACL: "
+                << acl_info.max_aces_per_acl << std::endl;
+    }
+}
+
 /*======*/
 /*======*/
 
@@ -1132,6 +1168,10 @@ init_info_fields(YamlSubsystem *sub)
 
     // YamlQosInfo
     sub->qos_info.trust = NULL;
+    // YamlAclInfo
+    sub->acl_info.max_acls = NULL;
+    sub->acl_info.max_aces = NULL;
+    sub->acl_info.max_aces_per_acl = NULL;
 }
 
 extern "C" const YamlLedType *
@@ -2148,6 +2188,76 @@ yaml_get_queue_profile_entry(YamlConfigHandle handle,
     }
     return(&sub->queue_profile_entries[idx]);
 }
+
+/*======*/
+/* ACL. */
+/*======*/
+extern "C" int
+yaml_parse_acl(YamlConfigHandle handle, const char *subsyst)
+{
+    YAML::Node doc;
+    const YamlFile *yfile = NULL;
+
+    YamlConfigHandlePrivate *priv_hand = (YamlConfigHandlePrivate *)handle;
+
+    YamlSubsystem *sub = NULL;
+    string sub_str = subsyst;
+    try {
+        sub = priv_hand->subsystem_map.at(sub_str);
+    } catch(...) {
+        return(-1);
+    }
+
+    // Get the name for the acl file
+    yfile = yaml_find_file(handle, subsyst, YAML_ACL_NAME);
+
+    if (yfile == NULL) {
+        return(0);
+    }
+
+    string file_name = sub->dir_name + string(yfile->filename);
+
+    ifstream fin(file_name.c_str());
+    if (fin.fail()) {
+        return -1;
+    }
+
+    try {
+        YAML::Parser parser(fin);
+        parser.GetNextDocument(doc);
+    } catch (YAML::ParserException &pe) {
+        return(-1);
+    } catch (...) {
+        return(-1);
+    }
+
+    try {
+        doc["acl_info"] >> sub->acl_info;
+    } catch (YAML::RepresentationException &re) {
+        return(-1);
+    } catch (...) {
+        return(-1);
+    }
+
+    return(0);
+}
+
+extern "C" YamlAclInfo *
+yaml_get_acl_info(YamlConfigHandle handle, const char *subsyst)
+{
+    YamlConfigHandlePrivate *priv_handle = (YamlConfigHandlePrivate *)handle;
+
+    YamlSubsystem *sub = NULL;
+    string sub_str = subsyst;
+    try {
+        sub = priv_handle->subsystem_map.at(sub_str);
+    } catch(...) {
+        return(NULL);
+    }
+
+    return(&sub->acl_info);
+}
+
 /*======*/
 /*======*/
 
