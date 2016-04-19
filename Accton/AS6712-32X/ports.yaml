@@ -23,7 +23,7 @@ version:         '1'
 port_info:
     number_ports:    104
     max_port_speed:  40000
-    max_transmission_unit: 9216
+    max_transmission_unit: 9192
     max_lag_count:         1024
     max_lag_member_count:  256
     L3_port_requires_internal_VLAN: True
