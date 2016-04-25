@@ -20,11 +20,11 @@ product_name:    OPS_Appliance
 version:         '1'
 
 port_info:
-    number_ports:    3
+    number_ports:    7
     max_port_speed:  1000
     max_transmission_unit: 1500
-    max_lag_count:         1024
-    max_lag_member_count:  256
+    max_lag_count:         8
+    max_lag_member_count:  8
     L3_port_requires_internal_VLAN: False
 
 #  Import or reference devices.yaml file
@@ -60,6 +60,50 @@ ports:
     -  name:             eth3
        switch_device:      0
        switch_device_port: 3
+       pluggable:          False
+       connector:          RJ45
+       max_speed:          1000
+       speeds:             [1000]  # supported speeds in Mb/S
+       capabilities:       [enet1G]
+       subports:           []
+       supported_modules:  [TBD]
+
+    -  name:             eth4
+       switch_device:      0
+       switch_device_port: 4
+       pluggable:          False
+       connector:          RJ45
+       max_speed:          1000
+       speeds:             [1000]  # supported speeds in Mb/S
+       capabilities:       [enet1G]
+       subports:           []
+       supported_modules:  [TBD]
+
+    -  name:             eth5
+       switch_device:      0
+       switch_device_port: 5
+       pluggable:          False
+       connector:          RJ45
+       max_speed:          1000
+       speeds:             [1000]  # supported speeds in Mb/S
+       capabilities:       [enet1G]
+       subports:           []
+       supported_modules:  [TBD]
+
+    -  name:             eth6
+       switch_device:      0
+       switch_device_port: 6
+       pluggable:          False
+       connector:          RJ45
+       max_speed:          1000
+       speeds:             [1000]  # supported speeds in Mb/S
+       capabilities:       [enet1G]
+       subports:           []
+       supported_modules:  [TBD]
+
+    -  name:             eth7
+       switch_device:      0
+       switch_device_port: 7
        pluggable:          False
        connector:          RJ45
        max_speed:          1000
