@@ -1938,14 +1938,14 @@ yaml_parse_fru(YamlConfigHandle handle, const char *subsyst)
     yfile = yaml_find_file(handle, subsyst, YAML_FRU_NAME);
 
     if (yfile == NULL) {
-        return(-1);
+        return(-2);
     }
 
     string file_name = sub->dir_name + string(yfile->filename);
 
     ifstream fin(file_name.c_str());
     if (fin.fail()) {
-        return(-1);
+        return(-2);
     }
 
     try {
