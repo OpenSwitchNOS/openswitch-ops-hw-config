@@ -2215,6 +2215,11 @@ yaml_parse_acl(YamlConfigHandle handle, const char *subsyst)
 
     ifstream fin(file_name.c_str());
     if (fin.fail()) {
+        /* If acl.yaml file not found, return a limited init value
+         *  to allow system init */
+        sub->acl_info.max_acls = 1;
+        sub->acl_info.max_aces = 1;
+        sub->acl_info.max_aces_per_acl = 1;
         return -1;
     }
 
