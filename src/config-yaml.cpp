@@ -885,9 +885,9 @@ static void operator >> (const YAML::Node &node, YamlQosInfo &qos_info)
     node["default_qos_trust"] >> str;
     qos_info.trust = strdup(str.c_str());
     if (qos_info.trust != NULL &&
-            strncmp(qos_info.trust, "none", QOS_MAX_STRING_LENGTH) != 0 &&
-            strncmp(qos_info.trust, "cos", QOS_MAX_STRING_LENGTH) != 0 &&
-            strncmp(qos_info.trust, "dscp", QOS_MAX_STRING_LENGTH) != 0) {
+            str.compare("none") != 0 &&
+            str.compare("cos") != 0 &&
+            str.compare("cos") != 0) {
         std::cout << "config-yaml|ERR|Unexpected qos trust: "
                 << qos_info.trust << std::endl;
     }
@@ -903,14 +903,14 @@ static void operator >> (const YAML::Node &node, YamlScheduleProfileEntry &entry
     node["algorithm"] >> str;
     entry.algorithm = strdup(str.c_str());
     if (entry.algorithm != NULL &&
-            strncmp(entry.algorithm, "strict", QOS_MAX_STRING_LENGTH) != 0 &&
-            strncmp(entry.algorithm, "dwrr", QOS_MAX_STRING_LENGTH) != 0) {
+            str.compare("strict") != 0 &&
+            str.compare("dwrr") != 0) {
         std::cout << "config-yaml|ERR|Unexpected algorithm: "
                 << entry.algorithm << std::endl;
     }
 
     /* Only check for weight if "dwrr" algorithm */
-    if (strncmp(entry.algorithm, "dwrr", QOS_MAX_STRING_LENGTH) == 0) {
+    if (str.compare("dwrr") == 0) {
         node["weight"] >> str;
         entry.weight = strtol(str.c_str(), 0, 0);
         if (entry.weight < 1) {
@@ -986,9 +986,9 @@ static void operator >> (const YAML::Node &node, YamlCosMapEntry &entry)
     node["color"] >> str;
     entry.color = strdup(str.c_str());
     if (entry.color != NULL &&
-            strncmp(entry.color, "green", QOS_MAX_STRING_LENGTH) != 0 &&
-            strncmp(entry.color, "yellow", QOS_MAX_STRING_LENGTH) != 0 &&
-            strncmp(entry.color, "red", QOS_MAX_STRING_LENGTH) != 0) {
+            str.compare("green") != 0 &&
+            str.compare("yellow") != 0 &&
+            str.compare("red") != 0) {
         std::cout << "config-yaml|ERR|Unexpected color: "
                 << entry.color << std::endl;
     }
@@ -1018,9 +1018,9 @@ static void operator >> (const YAML::Node &node, YamlDscpMapEntry &entry)
     node["color"] >> str;
     entry.color = strdup(str.c_str());
     if (entry.color != NULL &&
-            strncmp(entry.color, "green", QOS_MAX_STRING_LENGTH) != 0 &&
-            strncmp(entry.color, "yellow", QOS_MAX_STRING_LENGTH) != 0 &&
-            strncmp(entry.color, "red", QOS_MAX_STRING_LENGTH) != 0) {
+            str.compare("green") != 0 &&
+            str.compare("yellow") != 0 &&
+            str.compare("red") != 0) {
         std::cout << "config-yaml|ERR|Unexpected color: "
                 << entry.color << std::endl;
     }
