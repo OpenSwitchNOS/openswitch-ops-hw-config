@@ -21,9 +21,9 @@ product_name:    AS7712-32X
 version:         '1'
 
 port_info:
-    number_ports:    32
+    number_ports:    104
     max_port_speed:  100000
-    max_transmission_unit: 9216
+    max_transmission_unit: 9192
     max_lag_count:         1024
     max_lag_member_count:  256
     L3_port_requires_internal_VLAN: True
@@ -81,7 +81,7 @@ ports:
        subport_number:      1
     -  name:             "1-2"
        switch_device:      0
-       switch_device_port: 50
+       switch_device_port: 51
        parent_port:        1
        pluggable:          False
        connector:          QSFP28
@@ -93,7 +93,7 @@ ports:
        subport_number:      2
     -  name:             "1-3"
        switch_device:      0
-       switch_device_port: 50
+       switch_device_port: 52
        parent_port:        1
        pluggable:          False
        connector:          QSFP28
@@ -105,7 +105,7 @@ ports:
        subport_number:      3
     -  name:             "1-4"
        switch_device:      0
-       switch_device_port: 50
+       switch_device_port: 53
        parent_port:        1
        pluggable:          False
        connector:          QSFP28
@@ -121,9 +121,9 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [2-1,2-2,2-3,2-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p2
        module_signals:
@@ -146,15 +146,63 @@ ports:
                 device:     cpld1
                 register:   0x20
                 bitmask:    0x02
+    -  name:             "2-1"
+       switch_device:      0
+       switch_device_port: 54
+       parent_port:        2
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "2-2"
+       switch_device:      0
+       switch_device_port: 55
+       parent_port:        2
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "2-3"
+       switch_device:      0
+       switch_device_port: 56
+       parent_port:        2
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "2-4"
+       switch_device:      0
+       switch_device_port: 57
+       parent_port:        2
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             3
        switch_device:      0
        switch_device_port: 58
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [3-1,3-2,3-3,3-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p3
        module_signals:
@@ -177,15 +225,63 @@ ports:
                 device:     cpld1
                 register:   0x20
                 bitmask:    0x04
+    -  name:             "3-1"
+       switch_device:      0
+       switch_device_port: 58
+       parent_port:        3
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "3-2"
+       switch_device:      0
+       switch_device_port: 59
+       parent_port:        3
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "3-3"
+       switch_device:      0
+       switch_device_port: 60
+       parent_port:        3
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "3-4"
+       switch_device:      0
+       switch_device_port: 61
+       parent_port:        3
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             4
        switch_device:      0
        switch_device_port: 62
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [4-1,4-2,4-3,4-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p4
        module_signals:
@@ -208,15 +304,63 @@ ports:
                 device:     cpld1
                 register:   0x20
                 bitmask:    0x08
+    -  name:             "4-1"
+       switch_device:      0
+       switch_device_port: 62
+       parent_port:        4
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "4-2"
+       switch_device:      0
+       switch_device_port: 63
+       parent_port:        4
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "4-3"
+       switch_device:      0
+       switch_device_port: 64
+       parent_port:        4
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "4-4"
+       switch_device:      0
+       switch_device_port: 65
+       parent_port:        4
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             5
        switch_device:      0
        switch_device_port: 68
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [5-1,5-2,5-3,5-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p5
        module_signals:
@@ -239,15 +383,63 @@ ports:
                 device:     cpld1
                 register:   0x20
                 bitmask:    0x10
+    -  name:             "5-1"
+       switch_device:      0
+       switch_device_port: 68
+       parent_port:        5
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "5-2"
+       switch_device:      0
+       switch_device_port: 69
+       parent_port:        5
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "5-3"
+       switch_device:      0
+       switch_device_port: 70
+       parent_port:        5
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "5-4"
+       switch_device:      0
+       switch_device_port: 71
+       parent_port:        5
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             6
        switch_device:      0
        switch_device_port: 72
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [6-1,6-2,6-3,6-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p6
        module_signals:
@@ -270,15 +462,63 @@ ports:
                 device:     cpld1
                 register:   0x20
                 bitmask:    0x20
+    -  name:             "6-1"
+       switch_device:      0
+       switch_device_port: 72
+       parent_port:        6
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "6-2"
+       switch_device:      0
+       switch_device_port: 73
+       parent_port:        6
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "6-3"
+       switch_device:      0
+       switch_device_port: 74
+       parent_port:        6
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "6-4"
+       switch_device:      0
+       switch_device_port: 75
+       parent_port:        6
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             7
        switch_device:      0
        switch_device_port: 76
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [7-1,7-2,7-3,7-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p7
        module_signals:
@@ -301,15 +541,63 @@ ports:
                 device:     cpld1
                 register:   0x20
                 bitmask:    0x40
+    -  name:             "7-1"
+       switch_device:      0
+       switch_device_port: 76
+       parent_port:        7
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "7-2"
+       switch_device:      0
+       switch_device_port: 77
+       parent_port:        7
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "7-3"
+       switch_device:      0
+       switch_device_port: 78
+       parent_port:        7
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "7-4"
+       switch_device:      0
+       switch_device_port: 79
+       parent_port:        7
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             8
        switch_device:      0
        switch_device_port: 80
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [8-1,8-2,8-3,8-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p8
        module_signals:
@@ -332,15 +620,63 @@ ports:
                 device:     cpld1
                 register:   0x20
                 bitmask:    0x80
+    -  name:             "8-1"
+       switch_device:      0
+       switch_device_port: 80
+       parent_port:        8
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "8-2"
+       switch_device:      0
+       switch_device_port: 81
+       parent_port:        8
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "8-3"
+       switch_device:      0
+       switch_device_port: 82
+       parent_port:        8
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "8-4"
+       switch_device:      0
+       switch_device_port: 83
+       parent_port:        8
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             9
        switch_device:      0
        switch_device_port: 34
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [9-1,9-2,9-3,9-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p9
        module_signals:
@@ -363,15 +699,63 @@ ports:
                 device:     cpld1
                 register:   0x21
                 bitmask:    0x01
+    -  name:             "9-1"
+       switch_device:      0
+       switch_device_port: 34
+       parent_port:        9
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "9-2"
+       switch_device:      0
+       switch_device_port: 35
+       parent_port:        9
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "9-3"
+       switch_device:      0
+       switch_device_port: 36
+       parent_port:        9
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "9-4"
+       switch_device:      0
+       switch_device_port: 37
+       parent_port:        9
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             10
        switch_device:      0
        switch_device_port: 38
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [10-1,10-2,10-3,10-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p10
        module_signals:
@@ -394,15 +778,63 @@ ports:
                 device:     cpld1
                 register:   0x21
                 bitmask:    0x02
+    -  name:             "10-1"
+       switch_device:      0
+       switch_device_port: 38
+       parent_port:        10
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "10-2"
+       switch_device:      0
+       switch_device_port: 39
+       parent_port:        10
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "10-3"
+       switch_device:      0
+       switch_device_port: 40
+       parent_port:        10
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "10-4"
+       switch_device:      0
+       switch_device_port: 41
+       parent_port:        10
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             11
        switch_device:      0
        switch_device_port: 42
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [11-1,11-2,11-3,11-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p11
        module_signals:
@@ -425,15 +857,63 @@ ports:
                 device:     cpld1
                 register:   0x21
                 bitmask:    0x04
+    -  name:             "11-1"
+       switch_device:      0
+       switch_device_port: 42
+       parent_port:        11
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "11-2"
+       switch_device:      0
+       switch_device_port: 43
+       parent_port:        11
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "11-3"
+       switch_device:      0
+       switch_device_port: 44
+       parent_port:        11
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "11-4"
+       switch_device:      0
+       switch_device_port: 45
+       parent_port:        11
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             12
        switch_device:      0
        switch_device_port: 46
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [12-1,12-2,12-3,12-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p12
        module_signals:
@@ -456,14 +936,62 @@ ports:
                 device:     cpld1
                 register:   0x21
                 bitmask:    0x08
+    -  name:             "12-1"
+       switch_device:      0
+       switch_device_port: 46
+       parent_port:        12
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "12-2"
+       switch_device:      0
+       switch_device_port: 47
+       parent_port:        12
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "12-3"
+       switch_device:      0
+       switch_device_port: 48
+       parent_port:        12
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "12-4"
+       switch_device:      0
+       switch_device_port: 49
+       parent_port:        12
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             13
        switch_device:      0
        switch_device_port: 84
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p13
@@ -493,8 +1021,8 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p14
@@ -524,8 +1052,8 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p15
@@ -555,8 +1083,8 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p16
@@ -586,8 +1114,8 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p17
@@ -617,8 +1145,8 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p18
@@ -648,8 +1176,8 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p19
@@ -679,8 +1207,8 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p20
@@ -710,9 +1238,9 @@ ports:
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [21-1,21-2,21-3,21-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p21
        module_signals:
@@ -735,15 +1263,63 @@ ports:
                 device:     cpld1
                 register:   0x22
                 bitmask:    0x10
+    -  name:             "21-1"
+       switch_device:      0
+       switch_device_port: 17
+       parent_port:        21
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "21-2"
+       switch_device:      0
+       switch_device_port: 18
+       parent_port:        21
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "21-3"
+       switch_device:      0
+       switch_device_port: 19
+       parent_port:        21
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "21-4"
+       switch_device:      0
+       switch_device_port: 20
+       parent_port:        21
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             22
        switch_device:      0
        switch_device_port: 21
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [22-1,22-2,22-3,22-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p22
        module_signals:
@@ -766,15 +1342,63 @@ ports:
                 device:     cpld1
                 register:   0x22
                 bitmask:    0x20
+    -  name:             "22-1"
+       switch_device:      0
+       switch_device_port: 21
+       parent_port:        22
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "22-2"
+       switch_device:      0
+       switch_device_port: 22
+       parent_port:        22
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "22-3"
+       switch_device:      0
+       switch_device_port: 23
+       parent_port:        22
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "22-4"
+       switch_device:      0
+       switch_device_port: 24
+       parent_port:        22
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             23
        switch_device:      0
        switch_device_port: 25
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [23-1,23-2,23-3,23-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p23
        module_signals:
@@ -797,15 +1421,63 @@ ports:
                 device:     cpld1
                 register:   0x22
                 bitmask:    0x40
+    -  name:             "23-1"
+       switch_device:      0
+       switch_device_port: 25
+       parent_port:        23
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "23-2"
+       switch_device:      0
+       switch_device_port: 26
+       parent_port:        23
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "23-3"
+       switch_device:      0
+       switch_device_port: 27
+       parent_port:        23
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "23-4"
+       switch_device:      0
+       switch_device_port: 28
+       parent_port:        23
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             24
        switch_device:      0
        switch_device_port: 29
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [24-1,24-2,24-3,24-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p24
        module_signals:
@@ -828,15 +1500,63 @@ ports:
                 device:     cpld1
                 register:   0x22
                 bitmask:    0x80
+    -  name:             "24-1"
+       switch_device:      0
+       switch_device_port: 29
+       parent_port:        24
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "24-2"
+       switch_device:      0
+       switch_device_port: 30
+       parent_port:        24
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "24-3"
+       switch_device:      0
+       switch_device_port: 31
+       parent_port:        24
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "24-4"
+       switch_device:      0
+       switch_device_port: 32
+       parent_port:        24
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             25
        switch_device:      0
        switch_device_port: 118
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [25-1,25-2,25-3,25-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p25
        module_signals:
@@ -859,15 +1579,63 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x01
+    -  name:             "25-1"
+       switch_device:      0
+       switch_device_port: 118
+       parent_port:        25
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "25-2"
+       switch_device:      0
+       switch_device_port: 119
+       parent_port:        25
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "25-3"
+       switch_device:      0
+       switch_device_port: 120
+       parent_port:        25
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "25-4"
+       switch_device:      0
+       switch_device_port: 121
+       parent_port:        25
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             26
        switch_device:      0
        switch_device_port: 122
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [26-1,26-2,26-3,26-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p26
        module_signals:
@@ -890,15 +1658,63 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x02
+    -  name:             "26-1"
+       switch_device:      0
+       switch_device_port: 122
+       parent_port:        26
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "26-2"
+       switch_device:      0
+       switch_device_port: 123
+       parent_port:        26
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "26-3"
+       switch_device:      0
+       switch_device_port: 124
+       parent_port:        26
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "26-4"
+       switch_device:      0
+       switch_device_port: 125
+       parent_port:        26
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             27
        switch_device:      0
        switch_device_port: 126
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [27-1,27-2,27-3,27-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p27
        module_signals:
@@ -921,15 +1737,63 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x04
+    -  name:             "27-1"
+       switch_device:      0
+       switch_device_port: 126
+       parent_port:        27
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "27-2"
+       switch_device:      0
+       switch_device_port: 127
+       parent_port:        27
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "27-3"
+       switch_device:      0
+       switch_device_port: 128
+       parent_port:        27
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "27-4"
+       switch_device:      0
+       switch_device_port: 129
+       parent_port:        27
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             28
        switch_device:      0
        switch_device_port: 130
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
-       subports:           []
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [28-1,28-2,28-3,28-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p28
        module_signals:
@@ -952,14 +1816,62 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x08
+    -  name:             "28-1"
+       switch_device:      0
+       switch_device_port: 130
+       parent_port:        28
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "28-2"
+       switch_device:      0
+       switch_device_port: 131
+       parent_port:        28
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "28-3"
+       switch_device:      0
+       switch_device_port: 132
+       parent_port:        28
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "28-4"
+       switch_device:      0
+       switch_device_port: 133
+       parent_port:        28
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             29
        switch_device:      0
        switch_device_port: 1
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G,split_4]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p29
@@ -983,14 +1895,62 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x10
+    -  name:             "29-1"
+       switch_device:      0
+       switch_device_port: 1
+       parent_port:        29
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "29-2"
+       switch_device:      0
+       switch_device_port: 2
+       parent_port:        29
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "29-3"
+       switch_device:      0
+       switch_device_port: 3
+       parent_port:        29
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "29-4"
+       switch_device:      0
+       switch_device_port: 4
+       parent_port:        29
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             30
        switch_device:      0
        switch_device_port: 5
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G,split_4]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p30
@@ -1014,14 +1974,62 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x20
+    -  name:             "30-1"
+       switch_device:      0
+       switch_device_port: 5
+       parent_port:        30
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "30-2"
+       switch_device:      0
+       switch_device_port: 6
+       parent_port:        30
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "30-3"
+       switch_device:      0
+       switch_device_port: 7
+       parent_port:        30
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "30-4"
+       switch_device:      0
+       switch_device_port: 8
+       parent_port:        30
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             31
        switch_device:      0
        switch_device_port: 9
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G,split_4]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p31
@@ -1045,14 +2053,62 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x40
+    -  name:             "31-1"
+       switch_device:      0
+       switch_device_port: 9
+       parent_port:        31
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "31-2"
+       switch_device:      0
+       switch_device_port: 10
+       parent_port:        31
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "31-3"
+       switch_device:      0
+       switch_device_port: 11
+       parent_port:        31
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "31-4"
+       switch_device:      0
+       switch_device_port: 12
+       parent_port:        31
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
     -  name:             32
        switch_device:      0
        switch_device_port: 13
        pluggable:          True
        connector:          QSFP28
        max_speed:          100000
-       speeds:             [100000]
-       capabilities:       [enet100G]
+       speeds:             [40000,100000]
+       capabilities:       [enet40G, enet100G,split_4]
        subports:           []
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p32
@@ -1076,3 +2132,51 @@ ports:
                 device:     cpld1
                 register:   0x23
                 bitmask:    0x80
+    -  name:             "32-1"
+       switch_device:      0
+       switch_device_port: 13
+       parent_port:        32
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "32-2"
+       switch_device:      0
+       switch_device_port: 14
+       parent_port:        32
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "32-3"
+       switch_device:      0
+       switch_device_port: 15
+       parent_port:        32
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "32-4"
+       switch_device:      0
+       switch_device_port: 16
+       parent_port:        32
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
