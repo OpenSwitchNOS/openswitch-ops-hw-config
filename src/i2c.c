@@ -22,6 +22,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/file.h>
+#include <endian.h>
 
 #include <linux/i2c-dev-user.h>
 
@@ -144,6 +145,71 @@ add_cmds(i2c_op **ops, i2c_op **cmds, int idx)
     }
 
     return(idx);
+}
+
+static int
+i2c_do_smbus_io(int fd, i2c_op *cmd)
+{
+    int rc;
+    uint32_t data;
+
+    if (cmd->direction) {
+        /* write */
+        if (1 == cmd->byte_count) {
+            data = (long)cmd->data[0];
+            rc = i2c_smbus_write_byte_data(fd, cmd->register_address, data);
+        } else if (2 == cmd->byte_count) {
+            data = (long)(*(unsigned short *)cmd->data);
+            rc = i2c_smbus_write_word_data(fd, cmd->register_address, data);
+        } else {
+            // NOT IMPLEMENTED
+            return EINVAL;
+        }
+        if (rc < 0)
+            rc = -errno;
+    } else {
+        /* read */
+        if (1 == cmd->byte_count) {
+            data = i2c_smbus_read_byte_data(fd, cmd->register_address);
+            if (data < 0)
+                rc = -errno;
+            else {
+                cmd->data[0] = (unsigned char)data;
+                rc = 0;
+            }
+        } else if (2 == cmd->byte_count) {
+            data = i2c_smbus_read_word_data(fd, cmd->register_address);
+            if (data < 0)
+                rc = -errno;
+            else {
+                *(unsigned short *)cmd->data = (unsigned short)data;
+                rc = 0;
+            }
+        } else {
+            size_t remaining = cmd->byte_count;
+            rc = 0;
+            while (remaining != 0) {
+                unsigned char *buffer;
+                size_t count = remaining;
+                size_t offset = (cmd->byte_count - remaining);
+
+                if (count > 1) {
+                  count = 1;
+                }
+                buffer = cmd->data + offset;
+                data = i2c_smbus_read_byte_data(fd,
+                                                cmd->register_address + offset);
+                if (data < 0) {
+                    rc = -errno;
+                    break;
+                }
+                *buffer = (unsigned char)data;
+                remaining -= count;
+            }
+        }
+    }
+
+    return rc;
 }
 
 int
@@ -269,93 +335,10 @@ i2c_execute(
                 continue;
             }
 
-            if (cmd->direction) {
-                // write
-                if (1 == cmd->byte_count) {
-                    long data;
-                    data = (long)cmd->data[0];
-                    rc = i2c_smbus_write_byte_data(
-                            fd,
-                            cmd->register_address,
-                            data);
-                    if (rc < 0) {
-                        rc = errno;
-                        final_rc = rc;
-                        continue;
-                    }
-                } else if (2 == cmd->byte_count) {
-                    long data;
-                    data = (long)(*(unsigned short *)cmd->data);
-                    rc = i2c_smbus_write_word_data(
-                            fd,
-                            cmd->register_address,
-                            data);
-                    if (rc < 0) {
-                        rc = errno;
-                        final_rc = rc;
-                        continue;
-                    }
-                } else {
-                    // NOT IMPLEMENTED
-                    rc = EINVAL;
-                    final_rc = rc;
-                    continue;
-                }
-            } else {
-                // read
-                if (1 == cmd->byte_count) {
-                    long data;
-                    data = i2c_smbus_read_byte_data(
-                                fd,
-                                cmd->register_address);
-                    if (data < 0) {
-                        rc = errno;
-                        final_rc = rc;
-                        continue;
-                    } else {
-                        cmd->data[0] = (unsigned char)data;
-                    }
-                } else if (2 == cmd->byte_count) {
-                    long data;
-                    data = i2c_smbus_read_word_data(
-                                fd,
-                                cmd->register_address);
-                    if (data < 0) {
-                        rc = errno;
-                        final_rc = rc;
-                        continue;
-                    } else {
-                        *(unsigned short *)cmd->data = (unsigned short)data;
-                    }
-                } else {
-                    size_t remaining = cmd->byte_count;
-                    while (remaining != 0) {
-                        unsigned char *buffer;
-                        long data;
-                        size_t count = remaining;
-                        size_t offset = (cmd->byte_count - remaining);
-
-                        if (count > 1) {
-                            count = 1;
-                        }
-
-                        buffer = cmd->data + offset;
-
-                        data = i2c_smbus_read_byte_data(
-                                fd,
-                                cmd->register_address + offset);
-
-                        if (data < 0) {
-                            rc = errno;
-                            final_rc = rc;
-                            break;
-                        }
-
-                        *buffer = (unsigned char)data;
-
-                        remaining -= count;
-                    }
-                }
+            rc = i2c_do_smbus_io(fd, cmd);
+            if (rc < 0) {
+                final_rc = rc;
+                continue;
             }
         }
     }
@@ -366,4 +349,171 @@ i2c_execute(
     close(fd);
 
     return final_rc;
+}
+
+int
+i2c_do_op(YamlConfigHandle handle,
+          const char *subsyst,
+          i2c_op *op)
+{
+    const YamlDevice *device;
+    i2c_op *cmds[2];
+
+    device = yaml_find_device(handle, subsyst, op->device);
+    if (device == NULL) {
+        return EINVAL;
+    }
+    cmds[0] = op;
+    cmds[1] = NULL;
+
+    return i2c_execute(handle, subsyst, device, cmds);
+}
+
+static int
+i2c_reg_io(YamlConfigHandle handle,
+           const char *subsyst,
+           const bool direction,
+           const i2c_bit_op *reg_op,
+           uint32_t *val)
+{
+    int rc;
+    uint8_t byte;
+    uint16_t word;
+    uint32_t dword;
+    i2c_op op = {0};
+
+    if (direction == WRITE) {
+        uint32_t pre_data;
+
+        /* Apply the polarity and mask */
+        dword = *val;
+        if (reg_op->negative_polarity)
+            dword = ~dword;
+        dword &= (uint32_t)reg_op->bit_mask;
+
+        /* If partial register write, must do read/modify/write */
+        if (((reg_op->register_size == 1) && (reg_op->bit_mask != 0xffu)) ||
+            ((reg_op->register_size == 2) && (reg_op->bit_mask != 0xffffu)) ||
+            ((reg_op->register_size == 4) && (reg_op->bit_mask != 0xffffffffu))) {
+            i2c_bit_op read_reg_op = *reg_op;
+
+            /* We want to read the entire register */
+            read_reg_op.bit_mask = 0xffffffffu >> ((4 - reg_op->register_size) * 8);
+            rc = i2c_reg_io(handle, subsyst, READ, &read_reg_op, &pre_data);
+            if (rc)
+                return rc;
+            pre_data &= ~(uint32_t)reg_op->bit_mask;
+            dword |= pre_data;
+        }
+    }
+
+    op.direction        = direction;
+    op.device           = reg_op->device;
+    op.register_address = reg_op->register_address;
+    op.byte_count       = reg_op->register_size;
+
+    switch(reg_op->register_size) {
+    case 1:
+        if (direction == WRITE)
+            byte = (unsigned char)dword;
+        op.data = (uint8_t *)&byte;
+        break;
+    case 2:
+        if (direction == WRITE)
+          word = htobe16((uint16_t)dword);
+        op.data = (uint8_t *)&word;
+        break;
+    case 4:
+        if (direction == WRITE)
+          dword = htobe32(dword);
+        op.data = (uint8_t *)&dword;
+        break;
+    default:
+        return EINVAL;
+    }
+    rc = i2c_do_op(handle, subsyst, &op);
+
+    if ((rc >= 0) && (direction == READ)) {
+
+        switch(reg_op->register_size) {
+        case 1:
+            dword = (uint32_t)byte;
+            break;
+        case 2:
+            /* byte-swapping already done... */
+            dword = (uint32_t)word;
+            break;
+        case 4:
+            dword = be32toh(dword);
+            break;
+        default:
+            return EINVAL;
+        }
+
+        /* Apply the polarity and mask */
+        if (reg_op->negative_polarity)
+            dword = ~dword;
+        dword &= (uint32_t)reg_op->bit_mask;
+        *val = dword;
+    }
+
+    return rc;
+}
+
+int
+i2c_reg_read(YamlConfigHandle handle,
+             const char *subsyst,
+             const i2c_bit_op *reg_op,
+             uint32_t *val)
+{
+    return i2c_reg_io(handle, subsyst, READ, reg_op, val);
+}
+
+int
+i2c_reg_write(YamlConfigHandle handle,
+              const char *subsyst,
+              const i2c_bit_op *reg_op,
+              const uint32_t val)
+{
+    uint32_t reg_data = val;
+
+    return i2c_reg_io(handle, subsyst, WRITE, reg_op, &reg_data);
+}
+
+int
+i2c_data_read(YamlConfigHandle handle,
+              const YamlDevice *device,
+              const char *subsyst,
+              const size_t offset,
+              const size_t len,
+              void *data)
+{
+    i2c_op op = {0};
+
+    op.direction = READ;
+    op.device = device->name;
+    op.register_address = offset;
+    op.byte_count = len;
+    op.data = data;
+
+    return i2c_do_op(handle, subsyst, &op);
+}
+
+int
+i2c_data_write(YamlConfigHandle handle,
+               const YamlDevice *device,
+               const char *subsyst,
+               const size_t offset,
+               const size_t len,
+               void *data)
+{
+    i2c_op op = {0};
+
+    op.direction = WRITE;
+    op.device = device->name;
+    op.register_address = offset;
+    op.byte_count = len;
+    op.data = data;
+
+    return i2c_do_op(handle, subsyst, &op);
 }

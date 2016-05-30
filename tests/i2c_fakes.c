@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
+#include <string.h>
 
 #include "../include/config-yaml.h"
 
@@ -40,6 +41,105 @@ i2c_execute(
 
         printf("i2c_fake: %d i2c_op commands sent.\n", i);
         printf("i2c_fake: Returning success for subsystem %s.\n", subsyst);
+        return 0;
+    } else {
+        return -1;
+    }
+}
+
+int
+i2c_reg_read(YamlConfigHandle handle,
+             const char *subsyst,
+             const i2c_bit_op *reg_op,
+             uint32_t *val)
+{
+    if ((handle != NULL) &&
+        (subsyst != NULL) && (strlen(subsyst) != 0) &&
+        (reg_op != NULL) &&
+        (val != NULL)) {
+        *val = 0;
+        printf("%s_fake: read from register processed.\n", __func__);
+        printf("%s_fake: Returning success for subsystem %s.\n",
+               __func__, subsyst);
+        return 0;
+    } else {
+        return -1;
+    }
+}
+
+int
+i2c_reg_write(YamlConfigHandle handle,
+              const char *subsyst,
+              const i2c_bit_op *reg_op,
+              const uint32_t val)
+{
+    if ((handle != NULL) &&
+        (subsyst != NULL) && (strlen(subsyst) != 0) &&
+        (reg_op != NULL)) {
+        printf("%s_fake: read from register processed.\n", __func__);
+        printf("%s_fake: Returning success for subsystem %s.\n",
+               __func__, subsyst);
+        return 0;
+    } else {
+        return -1;
+    }
+}
+
+int
+i2c_data_read(YamlConfigHandle handle,
+              const YamlDevice *device,
+              const char *subsyst,
+              const size_t offset,
+              const size_t len,
+              void *data)
+{
+    if ((handle != NULL) &&
+        (device != NULL) &&
+        (subsyst != NULL) && (strlen(subsyst) != 0) &&
+        (len != 0) &&
+        (data != NULL)) {
+        printf("%s_fake: read from register processed.\n", __func__);
+        printf("%s_fake: Returning success for subsystem %s.\n",
+               __func__, subsyst);
+        return 0;
+    } else {
+        return -1;
+    }
+}
+
+int
+i2c_data_write(YamlConfigHandle handle,
+               const YamlDevice *device,
+               const char *subsyst,
+               const size_t offset,
+               const size_t len,
+               void *data)
+{
+    if ((handle != NULL) &&
+        (device != NULL) &&
+        (subsyst != NULL) && (strlen(subsyst) != 0) &&
+        (len != 0) &&
+        (data != NULL)) {
+        printf("%s_fake: read from register processed.\n", __func__);
+        printf("%s_fake: Returning success for subsystem %s.\n",
+               __func__, subsyst);
+        return 0;
+    } else {
+        return -1;
+    }
+}
+
+int
+i2c_do_op(YamlConfigHandle handle,
+          const char *subsyst,
+          i2c_op *op)
+{
+    if ((handle != NULL) &&
+        (subsyst != NULL) && (strlen(subsyst) != 0) &&
+        (op != NULL)) {
+        printf("%s_fake: register operation processed.\n", __func__);
+        printf("%s_fake: Returning success for subsystem %s.\n",
+               __func__, subsyst);
         return 0;
     } else {
         return -1;

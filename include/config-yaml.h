@@ -48,6 +48,8 @@
 extern "C" {
 #endif
 
+#include <stdlib.h>
+#include <inttypes.h>
 #include "i2c.h"
 
 #define SFPP    "SFP_PLUS"      /*!< String to identify SFP+ modules */
@@ -738,6 +740,69 @@ extern int yaml_parse_leds(YamlConfigHandle handle, const char *subsyst);
  * @return 0 on success, else -1 on failure
  ***************************************************************************/
 extern int yaml_parse_acl(YamlConfigHandle handle, const char *subsyst);
+
+/************************************************************************//**
+ * Perform a data read from the specified i2c device
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] device    :Device to operate on
+ * @param[in] subsyst   :Name of the subsystem
+ * @param[in] offset    :Start offset of the read.
+ * @param[in] len       :Number of bytes to read.
+ * @param[out] data      :Data read.
+ *
+ * @return 0 on success, else errno on failure
+ ***************************************************************************/
+extern int i2c_data_read(YamlConfigHandle handle, const YamlDevice *device, const char *subsyst, const size_t offset, const size_t len, void *data);
+
+/************************************************************************//**
+ * Perform a data write to the specified i2c device
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] device    :Device to operate on
+ * @param[in] subsyst   :Name of the subsystem
+ * @param[in] offset    :Start offset of the write.
+ * @param[in] len       :Number of bytes to write.
+ * @param[in] data      :Data to be written.
+ *
+ * @return 0 on success, else errno on failure
+ ***************************************************************************/
+extern int i2c_data_write(YamlConfigHandle handle, const YamlDevice *device, const char *subsyst, const size_t offset, const size_t len, void *data);
+
+/************************************************************************//**
+ * Perform a register read for the specified i2c device
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] subsyst   :Name of the subsystem
+ * @param[in] reg_op    :Register to operate on
+ * @param[out] val      :Value read from register.
+ *
+ * @return 0 on success, else errno on failure
+ ***************************************************************************/
+extern int i2c_reg_read(YamlConfigHandle handle, const char *subsyst, const i2c_bit_op *reg_op, uint32_t *val);
+
+/************************************************************************//**
+ * Perform a register write for the specified i2c device
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] subsyst   :Name of the subsystem
+ * @param[in] reg_op    :Register to operate on
+ * @param[in] val       :Value to write.
+ *
+ * @return 0 on success, else errno on failure
+ ***************************************************************************/
+extern int i2c_reg_write(YamlConfigHandle handle, const char *subsyst, const i2c_bit_op *reg_op, const uint32_t val);
+
+/************************************************************************//**
+ * Perform a register operation for the specified i2c device
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] subsyst   :Name of the subsystem
+ * @param[in] op        :Register operation
+ *
+ * @return 0 on success, else errno on failure
+ ***************************************************************************/
+extern int i2c_do_op(YamlConfigHandle handle, const char *subsyst, i2c_op *op);
 
 /************************************************************************//**
  * Performs the list of i2c commands for the specified i2c device

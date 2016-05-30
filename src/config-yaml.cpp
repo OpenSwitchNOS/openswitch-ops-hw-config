@@ -2387,17 +2387,9 @@ yaml_init_devices(YamlConfigHandle handle, const char *subsystem)
 
     for (size_t idx = 0; idx < sub->init_ops.size(); idx++) {
         int rc;
-        i2c_op **ops = (i2c_op **)malloc(sizeof(i2c_op *) * 2);
         i2c_op op = sub->init_ops.at(idx);
-        const YamlDevice *device;
-        ops[0] = &op;
-        ops[1] = NULL;
 
-        device = yaml_find_device(handle, subsystem, op.device);
-
-        rc = i2c_execute(handle, subsystem, device, ops);
-
-        free(ops);
+        rc = i2c_do_op(handle, subsystem, &op);
     }
 
     return (0);
