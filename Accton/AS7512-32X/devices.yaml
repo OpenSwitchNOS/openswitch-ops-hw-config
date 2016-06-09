@@ -45,18 +45,6 @@ devices:    # just device relevant to platform code are listed
         bus:        i2c_0
         dev_type:   potentmeter
         address:    0x2E
-    -   name:       cpld1
-        bus:        i2c_0
-        dev_type:   cpld
-        address:    0x60
-    -   name:       cpld2
-        bus:        i2c_0
-        dev_type:   cpld
-        address:    0x62
-    -   name:       cpld3
-        bus:        i2c_0
-        dev_type:   cpld
-        address:    0x64
     -   name:       i2c_mux1
         bus:        i2c_0
         dev_type:   i2c_mux
@@ -105,6 +93,42 @@ devices:    # just device relevant to platform code are listed
             - device:   i2c_mux1
               register: NONE
               data:     [ 0x02 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       cpld1
+        bus:        i2c_0
+        dev_type:   cpld
+        address:    0x60
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x04 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       cpld2
+        bus:        i2c_0
+        dev_type:   cpld
+        address:    0x62
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x08 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       cpld3
+        bus:        i2c_0
+        dev_type:   cpld
+        address:    0x64
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x10 ]
         post:
             - device:   i2c_mux1
               register: NONE
