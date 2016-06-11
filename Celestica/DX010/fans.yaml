@@ -1,0 +1,239 @@
+# Copyright (C) 2016 Celestica Inc.
+# All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Fans Description File for Celestica DX010 Switch
+
+manufacturer:    Celestica
+product_name:    DX010
+version:         '1'
+
+# import or reference devices list here
+
+fan_info:
+     number_fan_frus:   5   #  5 controllable fan frus
+
+     fan_speed_control_type:   PER_FAN           # SINGLE or PER_FAN
+     fan_speed_control:
+             device:    emc2305_1
+             register:  0x40
+             bitmask:   0xFF
+     fan_speed_min:            SLOW
+     fan_speed_settings:
+           SLOW:    0x40     #   25% speed
+           NORMAL:  0x59     #   35% speed
+           MEDIUM:  0x99     #   60% speed
+           FAST:    0xCC     #   80% speed
+           MAX:     0xFF     #  100% speed
+
+     fan_direction:  FIXED   #  F2B, B2F, SETTABLE, FIXED
+     fan_direction_values:
+            F2B:  0x0
+            B2F:  0x1
+     fan_speed_multiplier:   3932160
+     fan_led_values:
+           OFF:    0x1
+           GOOD:   0x0
+           FAULT:  0x1
+
+fan_frus:
+   -   number:          1
+       fan_leds:
+            device:     gpio_mux
+            register:   0x0b
+            bitmask:    0x40
+       fan_direction_detect:
+            device:     gpio_mux
+            register:   0x01
+            bitmask:    0x80
+       fans:
+           -   name:   "1L"
+               fault:
+                   device:     emc2305_1
+                   register:   0x27
+                   bitmask:    0x02
+               speed:
+                   device:     emc2305_1
+                   register:   0x4E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_1
+                   register:   0x40
+                   bitmask:    0xFF
+
+           -   name:   "1R"
+               fault:
+                   device:     emc2305_2
+                   register:   0x27
+                   bitmask:    0x02
+               speed:
+                   device:     emc2305_2
+                   register:   0x4E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_2
+                   register:   0x40
+                   bitmask:    0xFF
+
+   -   number:          2
+       fan_leds:
+            device:     gpio_mux
+            register:   0x0c
+            bitmask:    0x01
+       fan_direction_detect:
+            device:     gpio_mux
+            register:   0x02
+            bitmask:    0x01
+       fans:
+           -   name:   "2L"
+               fault:
+                   device:     emc2305_1
+                   register:   0x27
+                   bitmask:    0x08
+               speed:
+                   device:     emc2305_1
+                   register:   0x6E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_1
+                   register:   0x60
+                   bitmask:    0xFF
+
+           -   name:   "2R"
+               fault:
+                   device:     emc2305_2
+                   register:   0x27
+                   bitmask:    0x01
+               speed:
+                   device:     emc2305_2
+                   register:   0x3E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_2
+                   register:   0x30
+                   bitmask:    0xFF
+
+   -   number:          3
+       fan_leds:
+            device:     gpio_mux
+            register:   0x0c
+            bitmask:    0x04
+       fan_direction_detect:
+            device:     gpio_mux
+            register:   0x02
+            bitmask:    0x02
+       fans:
+           -   name:   "3L"
+               fault:
+                   device:     emc2305_1
+                   register:   0x27
+                   bitmask:    0x10
+               speed:
+                   device:     emc2305_1
+                   register:   0x7E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_1
+                   register:   0x70
+                   bitmask:    0xFF
+
+           -   name:   "3R"
+               fault:
+                   device:     emc2305_2
+                   register:   0x27
+                   bitmask:    0x08
+               speed:
+                   device:     emc2305_2
+                   register:   0x6E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_2
+                   register:   0x60
+                   bitmask:    0xFF
+
+   -   number:          4
+       fan_leds:
+            device:     gpio_mux
+            register:   0x0c
+            bitmask:    0x10
+       fan_direction_detect:
+            device:     gpio_mux
+            register:   0x02
+            bitmask:    0x04
+       fans:
+           -   name:   "4L"
+               fault:
+                   device:     emc2305_1
+                   register:   0x27
+                   bitmask:    0x04
+               speed:
+                   device:     emc2305_1
+                   register:   0x5E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_1
+                   register:   0x50
+                   bitmask:    0xFF
+
+           -   name:   "4R"
+               fault:
+                   device:     emc2305_2
+                   register:   0x27
+                   bitmask:    0x10
+               speed:
+                   device:     emc2305_2
+                   register:   0x7E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_2
+                   register:   0x70
+                   bitmask:    0xFF
+
+   -   number:          5
+       fan_leds:
+            device:     gpio_mux
+            register:   0x0c
+            bitmask:    0x40
+       fan_direction_detect:
+            device:     gpio_mux
+            register:   0x02
+            bitmask:    0x08
+       fans:
+           -   name:   "5L"
+               fault:
+                   device:     emc2305_1
+                   register:   0x27
+                   bitmask:    0x01
+               speed:
+                   device:     emc2305_1
+                   register:   0x3E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_1
+                   register:   0x30
+                   bitmask:    0xFF
+
+           -   name:   "5R"
+               fault:
+                   device:     emc2305_2
+                   register:   0x27
+                   bitmask:    0x04
+               speed:
+                   device:     emc2305_2
+                   register:   0x5E
+                   bitmask:    0xFF
+               speed_pwm:
+                   device:     emc2305_2
+                   register:   0x50
+                   bitmask:    0xFF

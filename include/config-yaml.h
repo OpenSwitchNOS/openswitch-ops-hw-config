@@ -243,6 +243,7 @@ typedef struct {
     char              *module_eeprom; /*!< i2c device ID for module EEPROM */
     char              *parent_port;   /*!< parent port if subport */
     YamlModuleSignals module_signals; /*!< i2c ops for this module */
+    unsigned int      module_id;      /*!< port number for I2C */
     unsigned int      subport_number; /*!< sub id of a subport */
 } YamlPort;
 
@@ -336,6 +337,7 @@ typedef struct {
     char        *name;      /*!< Name identified of the Fan */
     i2c_bit_op  *fan_fault; /*!< op values for accessing fan fault */
     i2c_bit_op  *fan_speed; /*!< op values for accessing fan speed */
+    i2c_bit_op  *fan_speed_pwm; /*!< op values for setting fan speed */
 } YamlFan;
 
 /************************************************************************//**

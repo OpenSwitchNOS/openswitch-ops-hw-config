@@ -24,19 +24,43 @@
 #define WRITE   true
 #define READ    false
 
+#define CPLD_TYPE														( 0x89 )
+#define IOCTL_READ_REG                      _IOR(CPLD_TYPE,0x05,bspCpuCpldRegData_t)
+#define IOCTL_WRITE_REG                     _IOW(CPLD_TYPE,0x08,bspCpuCpldRegData_t)
+#define IOCTL_SFP_READ                      _IOR(CPLD_TYPE,0x0F,bspCpuCpldRegData_t)
+#define IOCTL_SFP_WRITE                     _IOW(CPLD_TYPE,0x10,bspCpuCpldRegData_t)
+
+typedef struct cpldRegData
+{
+    unsigned short regId;		/*register number*/
+    char val;		    		/*register value*/
+    unsigned char rw;			/*0:read 1:write*/
+}bspCpuCpldRegData_t;
+
+typedef struct SfpData
+{
+	char regId;
+	int portId;
+	char devAddr;
+	char val[256];
+	unsigned char rw;
+	unsigned char len;
+}SfpData_t;
+
 typedef struct {
     bool            direction;
     char            *device;
     int             byte_count;
     bool            set_register;
-    unsigned char   register_address;
+    unsigned short  register_address;
+    unsigned char   port;
     unsigned char   *data;
     bool            negative_polarity;
 } i2c_op;
 
 typedef struct {
     char            *device;
-    unsigned char   register_address;
+    unsigned short  register_address;
     unsigned char   register_size;      // 1, 2, or 4 byte register
     unsigned char   bit_mask;
     bool            negative_polarity;

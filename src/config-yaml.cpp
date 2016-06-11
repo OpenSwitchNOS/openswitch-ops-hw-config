@@ -129,7 +129,7 @@ static void operator >> (const YAML::Node &node, i2c_op &op)
         op.register_address = 0;
     } else {
         op.set_register = true;
-        op.register_address = (unsigned char)strtoul(str.c_str(), 0, 0);
+        op.register_address = (unsigned short)strtoul(str.c_str(), 0, 0);
     }
 
     vector<unsigned char> bytes;
@@ -275,7 +275,7 @@ static void operator >> (const YAML::Node &node, i2c_bit_op &op)
     op.device = strdup(str.c_str());
 
     node["register"] >> str;
-    op.register_address = (unsigned char)strtoul(str.c_str(), 0, 0);
+    op.register_address = (unsigned short)strtoul(str.c_str(), 0, 0);
 
     node["bitmask"] >> str;
     op.bit_mask = (unsigned char)strtoul(str.c_str(), 0, 0);
@@ -464,6 +464,8 @@ static void operator >> (const YAML::Node &node, YamlPort &port)
     if (port.pluggable) {
         node["module_eeprom"] >> str;
         port.module_eeprom = strdup(str.c_str());
+
+        node["module_id"] >> port.module_id;
 
         if (strcmp(port.connector, SFPP) == 0) {
             node["module_signals"] >> port.module_signals.sfp;
@@ -743,6 +745,10 @@ static void operator >> (const YAML::Node &node, YamlFan &fan)
     op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
     node["speed"] >> *op;
     fan.fan_speed = op;
+
+    op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+    node["speed_pwm"] >> *op;
+    fan.fan_speed_pwm = op;
 }
 
 static void operator >> (const YAML::Node &node, vector<YamlFan> &fans)

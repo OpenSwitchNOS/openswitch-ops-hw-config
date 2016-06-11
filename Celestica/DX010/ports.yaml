@@ -1,0 +1,1061 @@
+# Copyright (C) 2016 Celestica Inc.
+# All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Port Description File for Celestica DX010 Switch
+
+manufacturer:    Celestica
+product_name:    DX010
+version:         '1'
+
+port_info:
+    number_ports:    32
+    max_port_speed:  100000
+    max_transmission_unit: 9216
+    max_lag_count:         1024
+    max_lag_member_count:  256
+    L3_port_requires_internal_VLAN: True
+
+#  Import or reference devices.yaml file
+
+
+#  Note: We will need PHY information for future switches
+#        Should include an array of PHY descriptors
+#        and add info to port indicating the associated PHY
+
+ports:
+    -  name:             1
+       switch_device:      0
+       switch_device_port: 68
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          1
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x01
+    -  name:             2
+       switch_device:      0
+       switch_device_port: 69
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          2
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x02
+    -  name:             3
+       switch_device:      0
+       switch_device_port: 70
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          3
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x04
+    -  name:             4
+       switch_device:      0
+       switch_device_port: 71
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          4
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x08
+    -  name:             5
+       switch_device:      0
+       switch_device_port: 34
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          5
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x10
+    -  name:             6
+       switch_device:      0
+       switch_device_port: 35
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          6
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x20
+    -  name:             7
+       switch_device:      0
+       switch_device_port: 36
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          7
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x40
+    -  name:             8
+       switch_device:      0
+       switch_device_port: 37
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          8
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x250
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x254
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x240
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x244
+                bitmask:    0x80
+    -  name:             9
+       switch_device:      0
+       switch_device_port: 38
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          9
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x251
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x255
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x241
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x245
+                bitmask:    0x01
+    -  name:             10
+       switch_device:      0
+       switch_device_port: 39
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          10
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x251
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x255
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x241
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x245
+                bitmask:    0x02
+    -  name:             11
+       switch_device:      0
+       switch_device_port: 40
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          11
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x01
+    -  name:             12
+       switch_device:      0
+       switch_device_port: 41
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          12
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x02
+    -  name:             13
+       switch_device:      0
+       switch_device_port: 72
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          13
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x04
+    -  name:             14
+       switch_device:      0
+       switch_device_port: 73
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          14
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x08
+    -  name:             15
+       switch_device:      0
+       switch_device_port: 74
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          15
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x10
+    -  name:             16
+       switch_device:      0
+       switch_device_port: 75
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          16
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x20
+    -  name:             17
+       switch_device:      0
+       switch_device_port: 102
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          17
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x40
+    -  name:             18
+       switch_device:      0
+       switch_device_port: 103
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          18
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d0
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d4
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c0
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c4
+                bitmask:    0x80
+    -  name:             19
+       switch_device:      0
+       switch_device_port: 104
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          19
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d1
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d5
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c1
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c5
+                bitmask:    0x01
+    -  name:             20
+       switch_device:      0
+       switch_device_port: 105
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          20
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d1
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d5
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c1
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c5
+                bitmask:    0x02
+    -  name:             21
+       switch_device:      0
+       switch_device_port: 1
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          21
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x2d1
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x2d5
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x2c1
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x2c5
+                bitmask:    0x04
+    -  name:             22
+       switch_device:      0
+       switch_device_port: 2
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          22
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x01
+    -  name:             23
+       switch_device:      0
+       switch_device_port: 3
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          23
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x02
+    -  name:             24
+       switch_device:      0
+       switch_device_port: 4
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          24
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x04
+    -  name:             25
+       switch_device:      0
+       switch_device_port: 5
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          25
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x08
+    -  name:             26
+       switch_device:      0
+       switch_device_port: 6
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          26
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x10
+    -  name:             27
+       switch_device:      0
+       switch_device_port: 7
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          27
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x20
+    -  name:             28
+       switch_device:      0
+       switch_device_port: 8
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          28
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x40
+    -  name:             29
+       switch_device:      0
+       switch_device_port: 106
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          29
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d0
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d4
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c0
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c4
+                bitmask:    0x80
+    -  name:             30
+       switch_device:      0
+       switch_device_port: 107
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          30
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d1
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d5
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c1
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c5
+                bitmask:    0x01
+    -  name:             31
+       switch_device:      0
+       switch_device_port: 108
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          31
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d1
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d5
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c1
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c5
+                bitmask:    0x02
+    -  name:             32
+       switch_device:      0
+       switch_device_port: 109
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [100000]
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      cpld_sfpp
+       module_id:          32
+       module_signals:
+            qsfp28p_reset:
+                device:     cpld_io
+                register:   0x3d1
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     cpld_io
+                register:   0x3d5
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt:
+                device:     cpld_io
+                register:   0x3c1
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_interrupt_mask:
+                device:     cpld_io
+                register:   0x3c5
+                bitmask:    0x04
