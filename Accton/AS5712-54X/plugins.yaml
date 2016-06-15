@@ -51,3 +51,4 @@
 - libcopp_plugin.so
 - libswitchd_stp_plugin
 - libswitchd_mac_learning_plugin
+- libswitchd_logical_switch_plugin
