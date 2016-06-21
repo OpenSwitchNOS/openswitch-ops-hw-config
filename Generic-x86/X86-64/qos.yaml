@@ -122,67 +122,67 @@ dscp_map_entries:
    -   code_point:     0
        color:          green
        description:    CS0
-       local_priority: 0
+       local_priority: 1
    -   code_point:     1
        color:          green
        description:    ""
-       local_priority: 0
+       local_priority: 1
    -   code_point:     2
        color:          green
        description:    ""
-       local_priority: 0
+       local_priority: 1
    -   code_point:     3
        color:          green
        description:    ""
-       local_priority: 0
+       local_priority: 1
    -   code_point:     4
        color:          green
        description:    ""
-       local_priority: 0
+       local_priority: 1
    -   code_point:     5
        color:          green
        description:    ""
-       local_priority: 0
+       local_priority: 1
    -   code_point:     6
        color:          green
        description:    ""
-       local_priority: 0
+       local_priority: 1
    -   code_point:     7
        color:          green
        description:    ""
-       local_priority: 0
+       local_priority: 1
    -   code_point:     8
        color:          green
        description:    CS1
-       local_priority: 1
+       local_priority: 0
    -   code_point:     9
        color:          green
        description:    ""
-       local_priority: 1
+       local_priority: 0
    -   code_point:     10
        color:          green
        description:    AF11
-       local_priority: 1
+       local_priority: 0
    -   code_point:     11
        color:          green
        description:    ""
-       local_priority: 1
+       local_priority: 0
    -   code_point:     12
        color:          yellow
        description:    AF12
-       local_priority: 1
+       local_priority: 0
    -   code_point:     13
        color:          green
        description:    ""
-       local_priority: 1
+       local_priority: 0
    -   code_point:     14
        color:          red
        description:    AF13
-       local_priority: 1
+       local_priority: 0
    -   code_point:     15
        color:          green
        description:    ""
-       local_priority: 1
+       local_priority: 0
    -   code_point:     16
        color:          green
        description:    CS2
