@@ -213,6 +213,36 @@ i2c_do_smbus_io(int fd, i2c_op *cmd)
 }
 
 static int
+i2c_do_smbus_extended_address_io(int fd, i2c_op *cmd)
+{
+    int rc;
+    int i;
+
+    /* 16-bit address */
+    rc = i2c_smbus_write_byte_data(fd,
+                    (uint8_t)((cmd->register_address >> 8) & 0xff),
+                    (uint8_t)(cmd->register_address & 0xff));
+    if (rc < 0)
+        return -errno;
+
+    for (i = 0; i < cmd->byte_count; i++) {
+        if (cmd->direction) {
+            rc = i2c_smbus_write_byte(fd, cmd->data[i]);
+        } else {
+            rc = i2c_smbus_read_byte(fd);
+            if (rc >= 0)
+                cmd->data[i] = rc;
+        }
+        if (rc < 0) {
+            rc = -errno;
+            break;
+        }
+    }
+
+    return rc;
+}
+
+static int
 i2c_execute(
     YamlConfigHandle handle,
     const char *subsyst,
@@ -336,7 +366,14 @@ i2c_execute(
                 continue;
             }
 
-            rc = i2c_do_smbus_io(fd, cmd);
+            switch(dev->address_size) {
+            case SIZE_8_BITS:
+                rc = i2c_do_smbus_io(fd, cmd);
+                break;
+            case SIZE_16_BITS:
+                rc = i2c_do_smbus_extended_address_io(fd, cmd);
+                break;
+            }
             if (rc < 0) {
                 final_rc = rc;
                 continue;
@@ -390,7 +427,7 @@ i2c_reg_io(YamlConfigHandle handle,
         dword = *val;
         if (reg_op->negative_polarity)
             dword = ~dword;
-        dword &= (uint32_t)reg_op->bit_mask;
+        dword = (dword << reg_op->field_shift) & (uint32_t)reg_op->bit_mask;
 
         /* If partial register write, must do read/modify/write */
         if (((reg_op->register_size == 1) && (reg_op->bit_mask != 0xffu)) ||
@@ -400,10 +437,11 @@ i2c_reg_io(YamlConfigHandle handle,
 
             /* We want to read the entire register */
             read_reg_op.bit_mask = 0xffffffffu >> ((4 - reg_op->register_size) * 8);
+            read_reg_op.field_shift = 0;
             rc = i2c_reg_io(handle, subsyst, READ, &read_reg_op, &pre_data);
             if (rc)
                 return rc;
-            pre_data &= ~(uint32_t)reg_op->bit_mask;
+            pre_data &= ~reg_op->bit_mask;
             dword |= pre_data;
         }
     }
@@ -451,10 +489,10 @@ i2c_reg_io(YamlConfigHandle handle,
             return EINVAL;
         }
 
-        /* Apply the polarity and mask */
+        /* Apply the polarity, shift, and mask */
         if (reg_op->negative_polarity)
             dword = ~dword;
-        dword &= (uint32_t)reg_op->bit_mask;
+        dword = (dword & reg_op->bit_mask) >> reg_op->field_shift;
         *val = dword;
     }
 

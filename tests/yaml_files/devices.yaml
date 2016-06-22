@@ -708,6 +708,12 @@ devices:    # just device relevant to platform code are listed
         bus:        i2c_1
         dev_type:   fru_eeprom
         address:    0x57
+        address-size: 1
+    -   name:       big_fru_eeprom
+        bus:        i2c_1
+        dev_type:   big_fru_eeprom
+        address:    0x58
+        address-size: 2
     -   name:       i2c_mux1
         bus:        i2c_1
         dev_type:   i2c_mux
