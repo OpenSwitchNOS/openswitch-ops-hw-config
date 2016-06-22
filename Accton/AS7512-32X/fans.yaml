@@ -54,6 +54,7 @@ fan_frus:
             device:     fan_cpld
             register:   0x1C
             bitmask:    0xC0
+            shift:      6
        fan_direction_detect:
             device:     fan_cpld
             register:   0x10
@@ -84,6 +85,7 @@ fan_frus:
             device:     fan_cpld
             register:   0x1C
             bitmask:    0x30
+            shift:      4
        fan_direction_detect:
             device:     fan_cpld
             register:   0x10
@@ -114,6 +116,7 @@ fan_frus:
             device:     fan_cpld
             register:   0x1C
             bitmask:    0x0C
+            shift:      2
        fan_direction_detect:
             device:     fan_cpld
             register:   0x10
@@ -144,6 +147,7 @@ fan_frus:
             device:     fan_cpld
             register:   0x1C
             bitmask:    0x03
+            shift:      0
        fan_direction_detect:
             device:     fan_cpld
             register:   0x10
@@ -174,6 +178,7 @@ fan_frus:
             device:     fan_cpld
             register:   0x1D
             bitmask:    0x0C
+            shift:      2
        fan_direction_detect:
             device:     fan_cpld
             register:   0x10
@@ -203,6 +208,7 @@ fan_frus:
             device:     fan_cpld
             register:   0x1D
             bitmask:    0x03
+            shift:      0
        fan_direction_detect:
             device:     fan_cpld
             register:   0x10

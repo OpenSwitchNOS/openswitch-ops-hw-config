@@ -94,6 +94,16 @@ typedef struct {
 } YamlFile;
 
 /************************************************************************//**
+ * ENUM defining possible values for device address size.
+ * Note that typically the only devices that are not the default
+ * size of 8-bits are large EEPROM devices.
+ ***************************************************************************/
+typedef enum {
+    SIZE_8_BITS,    /*!< Default value of 8 bit addresses. */
+    SIZE_16_BITS,   /*!< Default value of 16 bit addresses. */
+} YamlDeviceAddressSize;
+
+/************************************************************************//**
  * STRUCT that contains the content of the device section of the
  *    devices.yaml file.
  ***************************************************************************/
@@ -104,6 +114,7 @@ typedef struct {
     int     address;    /*!< Address for the device on the bus */
     i2c_op  **pre;      /*!< i2c pre operation */
     i2c_op  **post;     /*!< i2c post operation */
+    YamlDeviceAddressSize address_size; /*!< size of device address. */
 } YamlDevice;
 
 /************************************************************************//**
@@ -256,7 +267,8 @@ typedef struct {
  ***************************************************************************/
 typedef enum {
     SINGLE,         /*!< Commands apply to all fans in this fan FRU */
-    PER_FAN         /*!< Commands apply per fan in this fan FRU */
+    PER_FAN,        /*!< Commands apply per fan in this fan FRU */
+    PER_FRU         /*!< Commands apply per fan FRU */
 } YamlFanControlType;
 
 /************************************************************************//**
@@ -328,8 +340,10 @@ typedef struct {
     i2c_bit_op          *fan_direction_control; /*!< dir ctrl op values */
     YamlDirectionValues direction_values;   /*!< op values to set direction */
     YamlDirectionValues direction_control_values; /*!< dir ctrl values */
-    int                 fan_speed_multiplier; /*!< multiplier to set speed */
+    int                 fan_speed_multiplier; /*!< multiplier to calculate speed */
+    int                 fan_speed_numerator;  /*!< numerator to caluclate speed */
     YamlLedValues       fan_led_values;     /*!< Fan LED values */
+    i2c_bit_op          *fan_led;           /*!< op values to access the LED */
 } YamlFanInfo;
 
 /************************************************************************//**
@@ -340,6 +354,8 @@ typedef struct {
     char        *name;      /*!< Name identified of the Fan */
     i2c_bit_op  *fan_fault; /*!< op values for accessing fan fault */
     i2c_bit_op  *fan_speed; /*!< op values for accessing fan speed */
+    i2c_bit_op  *fan_speed_msb; /*!< op values for accessing fan speed (msb) */
+    i2c_bit_op  *fan_speed_control; /*!< Ops to set PER_FAN fan speed */
 } YamlFan;
 
 /************************************************************************//**
@@ -351,6 +367,8 @@ typedef struct {
     YamlFan     **fans;     /*!< YamlFan pointers for fans in the FRU */
     i2c_bit_op  *fan_leds;  /*!< op values to access the LEDs */
     i2c_bit_op  *fan_direction_detect; /*!< op values to set fan direction */
+    i2c_bit_op  *fan_speed_control; /*!< Ops to set PER_FRU fan speed */
+    i2c_bit_op  *fan_present; /*!< Ops to determine if fru is present */
 } YamlFanFru;
 
 /************************************************************************//**
