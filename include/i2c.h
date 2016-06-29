@@ -29,7 +29,7 @@ typedef struct {
     char            *device;
     int             byte_count;
     bool            set_register;
-    unsigned char   register_address;
+    unsigned int   register_address;
     unsigned char   *data;
     bool            negative_polarity;
 } i2c_op;

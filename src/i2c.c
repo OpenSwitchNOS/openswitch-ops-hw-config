@@ -147,8 +147,33 @@ add_cmds(i2c_op **ops, i2c_op **cmds, int idx)
     return(idx);
 }
 
+long
+smbus_read_byte(int fd,
+                unsigned int register_address,
+                unsigned int addr_size)
+{
+    int rc = 0;
+    unsigned char reg = register_address >> 8;
+    unsigned char offset = register_address & 0xff;
+
+    switch (addr_size) {
+    case 1:
+        return i2c_smbus_read_byte_data(fd, offset);
+    case 2:
+        rc = i2c_smbus_write_byte_data(fd, reg, offset);
+        if (rc < 0) {
+            return rc;
+        }
+        return i2c_smbus_read_byte(fd);
+    default:
+        rc = -1;
+    }
+
+    return rc;
+}
+
 static int
-i2c_do_smbus_io(int fd, i2c_op *cmd)
+i2c_do_smbus_io(int fd, i2c_op *cmd, const YamlDevice *dev)
 {
     int rc;
     uint32_t data;
@@ -170,7 +195,9 @@ i2c_do_smbus_io(int fd, i2c_op *cmd)
     } else {
         /* read */
         if (1 == cmd->byte_count) {
-            data = i2c_smbus_read_byte_data(fd, cmd->register_address);
+            data = smbus_read_byte(fd,
+                                   cmd->register_address,
+                                   dev->addr_size);
             if (data < 0)
                 rc = -errno;
             else {
@@ -197,8 +224,9 @@ i2c_do_smbus_io(int fd, i2c_op *cmd)
                   count = 1;
                 }
                 buffer = cmd->data + offset;
-                data = i2c_smbus_read_byte_data(fd,
-                                                cmd->register_address + offset);
+            data = smbus_read_byte(fd,
+                                   cmd->register_address + offset,
+                                   dev->addr_size);
                 if (data < 0) {
                     rc = -errno;
                     break;
@@ -336,7 +364,7 @@ i2c_execute(
                 continue;
             }
 
-            rc = i2c_do_smbus_io(fd, cmd);
+            rc = i2c_do_smbus_io(fd, cmd, dev);
             if (rc < 0) {
                 final_rc = rc;
                 continue;

@@ -102,6 +102,7 @@ typedef struct {
     char    *bus;       /*!< Bus this device is on */
     char    *dev_type;  /*!< Device type identifier */
     int     address;    /*!< Address for the device on the bus */
+    int     addr_size;  /*!< Address size*/
     i2c_op  **pre;      /*!< i2c pre operation */
     i2c_op  **post;     /*!< i2c post operation */
 } YamlDevice;

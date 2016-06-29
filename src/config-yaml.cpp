@@ -179,6 +179,11 @@ static void operator >> (const YAML::Node &node, YamlDevice &device)
     device.dev_type = strdup(str.c_str());
 
     node["address"] >> device.address;
+    if (const YAML::Node *pNode = node.FindValue("addr_size")) {
+        *pNode >> device.addr_size;
+    } else {
+        device.addr_size = 1;
+    }
 
     if (const YAML::Node *pName = node.FindValue("pre")) {
         vector<i2c_op> pre;
