@@ -1,0 +1,357 @@
+# Copyright Mellanox Technologies, Ltd. 2001-2016.
+# All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Port Description File for Mellanox Technologies Ltd. MSN2700-CS2F switch
+
+manufacturer:    Mellanox Technologies Ltd.
+product_name:    MSN2700-CS2F
+version:         '1'
+
+port_info:
+    number_ports:    32
+    max_port_speed:  100000
+    max_transmission_unit: 1500
+    max_lag_count:         1024
+    max_lag_member_count:  256
+    L3_port_requires_internal_VLAN: False
+
+#  Import or reference devices.yaml file
+
+
+#  Note: We will need PHY information for future switches
+#        Should include an array of PHY descriptors
+#        and add info to port indicating the associated PHY
+
+ports:
+    -  name:             1
+       switch_device:      0
+       switch_device_port: 1
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             2
+       switch_device:      0
+       switch_device_port: 2
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             3
+       switch_device:      0
+       switch_device_port: 3
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             4
+       switch_device:      0
+       switch_device_port: 4
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             5
+       switch_device:      0
+       switch_device_port: 5
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             6
+       switch_device:      0
+       switch_device_port: 6
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             7
+       switch_device:      0
+       switch_device_port: 7
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             8
+       switch_device:      0
+       switch_device_port: 8
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             9
+       switch_device:      0
+       switch_device_port: 9
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             10
+       switch_device:      0
+       switch_device_port: 10
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             11
+       switch_device:      0
+       switch_device_port: 11
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             12
+       switch_device:      0
+       switch_device_port: 12
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             13
+       switch_device:      0
+       switch_device_port: 13
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             14
+       switch_device:      0
+       switch_device_port: 14
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             15
+       switch_device:      0
+       switch_device_port: 15
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             16
+       switch_device:      0
+       switch_device_port: 16
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             17
+       switch_device:      0
+       switch_device_port: 17
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             18
+       switch_device:      0
+       switch_device_port: 18
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             19
+       switch_device:      0
+       switch_device_port: 19
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             20
+       switch_device:      0
+       switch_device_port: 20
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             21
+       switch_device:      0
+       switch_device_port: 21
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             22
+       switch_device:      0
+       switch_device_port: 22
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             23
+       switch_device:      0
+       switch_device_port: 23
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             24
+       switch_device:      0
+       switch_device_port: 24
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             25
+       switch_device:      0
+       switch_device_port: 25
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             26
+       switch_device:      0
+       switch_device_port: 26
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             27
+       switch_device:      0
+       switch_device_port: 27
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             28
+       switch_device:      0
+       switch_device_port: 28
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             29
+       switch_device:      0
+       switch_device_port: 29
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             30
+       switch_device:      0
+       switch_device_port: 30
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             31
+       switch_device:      0
+       switch_device_port: 31
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
+    -  name:             32
+       switch_device:      0
+       switch_device_port: 32
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [10000,40000,100000]  # supported speeds in Mb/S
+       capabilities:       [enet100G]
+       subports:           []
+       supported_modules:  [TBD]
