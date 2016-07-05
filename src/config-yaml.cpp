@@ -71,6 +71,8 @@ typedef struct {
     vector<i2c_op>          init_ops;
 
     string                  dir_name;
+
+    YamlSystemLedInfo       system_led_info;
 } YamlSubsystem;
 
 typedef struct {
@@ -516,6 +518,18 @@ static void operator >> (const YAML::Node &node, YamlLedTypeSettings
     settings.on = (unsigned char)strtol(str.c_str(), 0, 0);
     node["FLASHING"] >> str;
     settings.flashing = (unsigned char)strtol(str.c_str(), 0, 0);
+}
+
+static void operator >> (const YAML::Node &node, YamlSystemLedInfo &system_led_info)
+{
+    if (const YAML::Node *pNode = node.FindValue("status_led_settings")) {
+        *pNode >> system_led_info.status_led_settings;
+    }
+    if (const YAML::Node *pNode = node.FindValue("status_led")) {
+        i2c_bit_op *op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        system_led_info.status_led = op;
+    }
 }
 
 static void operator >> (const YAML::Node &node, YamlLedType &led_type)
@@ -1168,6 +1182,12 @@ init_info_fields(YamlSubsystem *sub)
     sub->acl_info.max_acls = 0;
     sub->acl_info.max_aces = 0;
     sub->acl_info.max_aces_per_acl = 0;
+
+    // YamlSystemLedInfo
+    sub->system_led_info.status_led = NULL;
+    sub->system_led_info.status_led_settings.off     = '\0';
+    sub->system_led_info.status_led_settings.on       = '\0';
+    sub->system_led_info.status_led_settings.flashing = '\0';
 }
 
 extern "C" const YamlLedType *
@@ -1262,6 +1282,23 @@ yaml_get_led_count(YamlConfigHandle handle, const char *subsyst)
     }
 
     return(sub->leds.size());
+}
+
+extern "C" const YamlSystemLedInfo *
+yaml_get_system_led_info(YamlConfigHandle handle, const char *subsyst)
+{
+    YamlConfigHandlePrivate *priv_handle = (YamlConfigHandlePrivate *)handle;
+    string sub_str = subsyst;
+
+    YamlSubsystem *sub = NULL;
+
+    try {
+        sub = priv_handle->subsystem_map.at(sub_str);
+    } catch(...) {
+        return(NULL);
+    }
+
+    return(&sub->system_led_info);
 }
 
 extern "C" const YamlPsuInfo *
@@ -1914,6 +1951,15 @@ yaml_parse_leds(YamlConfigHandle handle, const char *subsyst)
         return(-1);
     } catch (...) {
         return(-1);
+    }
+    if (const YAML::Node *pSys = doc.FindValue("system")) {
+        try {
+            *pSys >> sub->system_led_info;
+        } catch (YAML::RepresentationException &re) {
+            return(-1);
+        } catch (...) {
+            return(-1);
+        }
     }
 
     return(0);

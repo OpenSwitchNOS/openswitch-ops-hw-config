@@ -420,6 +420,15 @@ typedef struct {
 } YamlLedInfo;
 
 /************************************************************************//**
+ * STRUCT that contains the content of the system section of the
+ * leds.yaml file.
+ ***************************************************************************/
+typedef struct {
+    i2c_bit_op *status_led;                  /* !< System status LED access */
+    YamlLedTypeSettings status_led_settings; /* !< System status LED settings */
+} YamlSystemLedInfo;
+
+/************************************************************************//**
  * STRUCT that contains the content of the fru_info section of the
  *    fru.yaml file.
  ***************************************************************************/
@@ -920,6 +929,17 @@ extern int yaml_get_led_count(YamlConfigHandle handle, const char *subsyst);
  * @return number of LED Types on success, else -1 on failure
  ***************************************************************************/
 extern int yaml_get_led_type_count(YamlConfigHandle handle, const char *subsyst);
+
+/************************************************************************//**
+ * Returns a pointer to the system status LED info
+ *
+ * @param[in] handle    :YamlConfigHandle for this subsystem
+ * @param[in] subsyst   :Name of the subsystem
+ *
+ * @return YamlSystemLedLed * on success, else NULL on failure
+ ***************************************************************************/
+extern const YamlSystemLedInfo *yaml_get_system_led_info(YamlConfigHandle handle,
+                                                         const char *subsyst);
 
 /************************************************************************//**
  * Parses and stores internally the information in the fru.yaml file
