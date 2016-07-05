@@ -566,10 +566,30 @@ static void operator >> (const YAML::Node &node, vector<YamlLed> &leds)
     }
 }
 
+static void operator >> (const YAML::Node &node, YamlLedValues &values)
+{
+    string str;
+
+    node["OFF"] >> str;
+    values.off = strtol(str.c_str(), 0, 0);
+    node["GOOD"] >> str;
+    values.good = strtol(str.c_str(), 0, 0);
+    node["FAULT"] >> str;
+    values.fault = strtol(str.c_str(), 0, 0);
+}
+
 static void operator >> (const YAML::Node &node, YamlPsuInfo &psu_info)
 {
+    if (const YAML::Node *pNode = node.FindValue("psu_led_values")) {
+        *pNode >> psu_info.psu_led_values;
+    }
     node["number_psus"] >> psu_info.number_psus;
     node["polling_period"] >> psu_info.polling_period;
+    if (const YAML::Node *pNode = node.FindValue("psu_led")) {
+        i2c_bit_op *op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        psu_info.psu_led = op;
+    }
 }
 
 static void operator >> (const YAML::Node &node, YamlPsu &psu)
@@ -659,18 +679,6 @@ static void operator >> (const YAML::Node &node, YamlFanControlType &control)
     } else {
         throw "FanControlType value is incorrect: " + str;
     }
-}
-
-static void operator >> (const YAML::Node &node, YamlLedValues &values)
-{
-    string str;
-
-    node["OFF"] >> str;
-    values.off = strtol(str.c_str(), 0, 0);
-    node["GOOD"] >> str;
-    values.good = strtol(str.c_str(), 0, 0);
-    node["FAULT"] >> str;
-    values.fault = strtol(str.c_str(), 0, 0);
 }
 
 static void operator >> (const YAML::Node &node, YamlDirectionValues &values)
@@ -1140,6 +1148,10 @@ init_info_fields(YamlSubsystem *sub)
     // YamlPsuInfo
     sub->psu_info.number_psus = 0;
     sub->psu_info.polling_period = 0;
+    sub->psu_info.psu_led_values.off = '\0';
+    sub->psu_info.psu_led_values.good = '\0';
+    sub->psu_info.psu_led_values.fault = '\0';
+    sub->psu_info.psu_led = NULL;
 
     // YamlLedInfo
     sub->led_info.number_leds = 0;

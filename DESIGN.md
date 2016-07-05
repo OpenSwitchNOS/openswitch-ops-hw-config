@@ -88,6 +88,8 @@ Power Supplies
 typedef struct {
     int         number_psus;        /* Number of power supplies */
     int         polling_period;     /* Polling period in miliseconds */
+    YamlLedValues psu_led_values;   /* Fan LED values */
+    i2c_bit_op  *psu_led;           /* op values to access the LED */
 } YamlPsuInfo;
 
 typedef struct {

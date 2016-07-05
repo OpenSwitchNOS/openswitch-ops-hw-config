@@ -22,6 +22,15 @@ power_info:
       number_psus:      2
       polling_period:   5000   # 5 seconds
 
+      psu_led_values:
+          OFF:       0x40
+          GOOD:      0x50
+          FAULT:     0x70
+
+      psu_led:
+          device:     cpld1
+          register:   0x0D
+          bitmask:    0x70
 
 psus:
      -  number:        1
