@@ -1,0 +1,139 @@
+# Copyright (C) 2016 Centec Networks (suzhou) Co., Ltd. All Rights Reserved
+# All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Fans Description File for Centec E582 48X2Q4Z Switch
+
+manufacturer:    Centec
+product_name:    E582-48X2Q4Z
+version:         '1'
+
+# import or reference devices list here
+
+fan_info:
+     number_fan_frus:   4   #  4 controllable fan frus
+
+     fan_speed_control_type:   PER_FAN             # SINGLE or PER_FAN
+     fan_speed_control:
+             device:    adt7470
+             register:  0x32
+             bitmask:   0xFF
+     fan_speed_min:            SLOW
+     fan_speed_settings:
+           SLOW:    0x61     #   25% speed
+           NORMAL:  0x61     #   40% speed
+           MEDIUM:  0x95     #   65% speed
+           FAST:    0xb5     #   80% speed
+           MAX:     0xff     #  100% speed
+
+     fan_direction:  F2B       #  F2B, B2F, SETTABLE, FIXED
+#    fan_direction_control:    # Not needed as FIXED
+#           device:
+#           register:
+#           bitmask:
+#    fan_direction_control_values:
+#           F2B:  0x0
+#           B2F:  0x1
+     fan_direction_values:
+            F2B:  0x0
+            B2F:  0x1
+     fan_speed_multiplier:   150
+     fan_led_values:
+           OFF:    0x0
+           GOOD:   0x1
+           FAULT:  0x2
+
+fan_frus:
+   -   number:          1
+       fan_leds:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x03
+       fan_direction_detect:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x08
+       fans:
+           -   name:   "1"
+               fault:
+                   device:     cpld0
+                   register:   0x7f
+                   bitmask:    0x80
+               speed:
+                   device:     adt7470
+                   register:   0x32
+                   bitmask:    0xFF
+
+
+   -   number:          2
+       fan_leds:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x03
+       fan_direction_detect:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x08
+       fans:
+           -   name:   "2"
+               fault:
+                   device:     cpld0
+                   register:   0x7f
+                   bitmask:    0x80
+               speed:
+                   device:     adt7470
+                   register:   0x33
+                   bitmask:    0xFF
+
+
+   -   number:          3
+       fan_leds:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x03
+       fan_direction_detect:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x08
+       fans:
+           -   name:   "3"
+               fault:
+                   device:     cpld0
+                   register:   0x7f
+                   bitmask:    0x80
+               speed:
+                   device:     adt7470
+                   register:   0x34
+                   bitmask:    0xFF
+
+
+   -   number:          4
+       fan_leds:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x03
+       fan_direction_detect:
+            device:     cpld0
+            register:   0x7f
+            bitmask:    0x08
+       fans:
+           -   name:   "4"
+               fault:
+                   device:     cpld0
+                   register:   0x7f
+                   bitmask:    0x80
+               speed:
+                   device:     adt7470
+                   register:   0x35
+                   bitmask:    0xFF

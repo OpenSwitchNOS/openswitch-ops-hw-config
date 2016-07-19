@@ -1,0 +1,2157 @@
+#Copyright (C) 2016 Centec Networks (suzhou) Co., Ltd. All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Port Description File for Centec E582 48X2Q4Z Switch
+
+manufacturer:    Centec
+product_name:    E582-48X2Q4Z
+version:         '1'
+
+port_info:
+    number_ports:    78
+    max_port_speed:  100000
+    max_transmission_unit: 9216
+    max_lag_count:         1024
+    max_lag_member_count:  256
+    L3_port_requires_internal_VLAN: True
+
+#  Import or reference devices.yaml file
+
+
+ports:
+    -  name:             1
+       switch_device:      0
+       switch_device_port: 0x801b
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp1
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x01
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x01
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x01
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x01
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x01
+                polarity:   negative
+    -  name:             2
+       switch_device:      0
+       switch_device_port: 0x8019
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp2
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x02
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x02
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x02
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x02
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x02
+                polarity:   negative
+    -  name:             3
+       switch_device:      0
+       switch_device_port: 0x8018
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp3
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x04
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x04
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x04
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x04
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x04
+                polarity:   negative
+    -  name:             4
+       switch_device:      0
+       switch_device_port: 0x8016
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp4
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x08
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x08
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x08
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x08
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x08
+                polarity:   negative
+    -  name:             5
+       switch_device:      0
+       switch_device_port: 0x8015
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp5
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x10
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x10
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x10
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x10
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x10
+                polarity:   negative
+    -  name:             6
+       switch_device:      0
+       switch_device_port: 0x8013
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp6
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x20
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x20
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x20
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x20
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x20
+                polarity:   negative
+    -  name:             7
+       switch_device:      0
+       switch_device_port: 0x8012
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp7
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x40
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x40
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x40
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x40
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x40
+                polarity:   negative
+    -  name:             8
+       switch_device:      0
+       switch_device_port: 0x8010
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp8
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x00
+                bitmask:    0x80
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x09
+                bitmask:    0x80
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x02
+                bitmask:    0x80
+             sfpp_mod_present:
+                device:     gpio1
+                register:   0x04
+                bitmask:    0x80
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x03
+                bitmask:    0x80
+                polarity:   negative
+    -  name:             9
+       switch_device:      0
+       switch_device_port: 0x800f
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp9
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x01
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x01
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x01
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x01
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x01
+                polarity:   negative
+    -  name:             10
+       switch_device:      0
+       switch_device_port: 0x800d
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp10
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x02
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x02
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x02
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x02
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x02
+                polarity:   negative
+    -  name:             11
+       switch_device:      0
+       switch_device_port: 0x800c
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp11
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x04
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x04
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x04
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x04
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x04
+                polarity:   negative
+    -  name:             12
+       switch_device:      0
+       switch_device_port: 0x800a
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp12
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x08
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x08
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x08
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x08
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x08
+                polarity:   negative
+    -  name:             13
+       switch_device:      0
+       switch_device_port: 0x8009
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp13
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x10
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x10
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x10
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x10
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x10
+                polarity:   negative
+    -  name:             14
+       switch_device:      0
+       switch_device_port: 0x8008
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp14
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x20
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x20
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x20
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x20
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x20
+                polarity:   negative
+    -  name:             15
+       switch_device:      0
+       switch_device_port: 0x8007
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp15
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x40
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x40
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x40
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x40
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x40
+                polarity:   negative
+    -  name:             16
+       switch_device:      0
+       switch_device_port: 0x8005
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp16
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio1
+                register:   0x01
+                bitmask:    0x80
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x80
+             sfpp_rx_loss:
+                device:     gpio1
+                register:   0x03
+                bitmask:    0x80
+             sfpp_mod_present:
+                device:     gpio2
+                register:   0x00
+                bitmask:    0x80
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x04
+                bitmask:    0x80
+                polarity:   negative
+    -  name:             17
+       switch_device:      0
+       switch_device_port: 0x8004
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp17
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x01
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0B
+                bitmask:    0x01
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x01
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x01
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x01
+                polarity:   negative
+    -  name:             18
+       switch_device:      0
+       switch_device_port: 0x8002
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp18
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x02
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0B
+                bitmask:    0x02
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x02
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x02
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x02
+                polarity:   negative
+    -  name:             19
+       switch_device:      0
+       switch_device_port: 0x8001
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp19
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x04
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0B
+                bitmask:    0x04
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x04
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x04
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x04
+                polarity:   negative
+    -  name:             20
+       switch_device:      0
+       switch_device_port: 0x8000
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp20
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x08
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0B
+                bitmask:    0x08
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x08
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x08
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x08
+                polarity:   negative
+    -  name:             21
+       switch_device:      0
+       switch_device_port: 0x0
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp21
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x10
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0B
+                bitmask:    0x10
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x10
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x10
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x10
+                polarity:   negative
+    -  name:             22
+       switch_device:      0
+       switch_device_port: 0x1
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp22
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x20
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0B
+                bitmask:    0x20
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x20
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x20
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x20
+                polarity:   negative
+    -  name:             23
+       switch_device:      0
+       switch_device_port: 0x3
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp23
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x40
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0A
+                bitmask:    0x40
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x40
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x40
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x40
+                polarity:   negative
+    -  name:             24
+       switch_device:      0
+       switch_device_port: 0x2
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp24
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x01
+                bitmask:    0x80
+             sfpp_tx_fault:
+                device:     cpld2
+                register:   0x0B
+                bitmask:    0x80
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x03
+                bitmask:    0x80
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x00
+                bitmask:    0x80
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld2
+                register:   0x05
+                bitmask:    0x80
+                polarity:   negative
+    -  name:             25
+       switch_device:      0
+       switch_device_port: 0x4
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp25
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x01
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x01
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x01
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x01
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x01
+                polarity:   negative
+    -  name:             26
+       switch_device:      0
+       switch_device_port: 0x5
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp26
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x02
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x02
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x02
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x02
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x02
+                polarity:   negative
+    -  name:             27
+       switch_device:      0
+       switch_device_port: 0x6
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp27
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x04
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x04
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x04
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x04
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x04
+                polarity:   negative
+    -  name:             28
+       switch_device:      0
+       switch_device_port: 0x7
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp28
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x08
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x08
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x08
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x08
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x08
+                polarity:   negative
+    -  name:             29
+       switch_device:      0
+       switch_device_port: 0x8
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp29
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x10
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x10
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x10
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x10
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x10
+                polarity:   negative
+    -  name:             30
+       switch_device:      0
+       switch_device_port: 0x9
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp30
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x20
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x20
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x20
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x20
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x20
+                polarity:   negative
+    -  name:             31
+       switch_device:      0
+       switch_device_port: 0xa
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp31
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x40
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x40
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x40
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x40
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x40
+                polarity:   negative
+    -  name:             32
+       switch_device:      0
+       switch_device_port: 0xc
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp32
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio2
+                register:   0x02
+                bitmask:    0x80
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x09
+                bitmask:    0x80
+             sfpp_rx_loss:
+                device:     gpio2
+                register:   0x04
+                bitmask:    0x80
+             sfpp_mod_present:
+                device:     gpio3
+                register:   0x01
+                bitmask:    0x80
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x03
+                bitmask:    0x80
+                polarity:   negative
+    -  name:             33
+       switch_device:      0
+       switch_device_port: 0xd
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp33
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x01
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x01
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x01
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x01
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x01
+                polarity:   negative
+    -  name:             34
+       switch_device:      0
+       switch_device_port: 0xf
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp34
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x02
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x02
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x02
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x02
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x02
+                polarity:   negative
+    -  name:             35
+       switch_device:      0
+       switch_device_port: 0x10
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp35
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x04
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x04
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x04
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x04
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x04
+                polarity:   negative
+    -  name:             36
+       switch_device:      0
+       switch_device_port: 0x12
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp36
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x08
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x08
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x08
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x08
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x08
+                polarity:   negative
+    -  name:             37
+       switch_device:      0
+       switch_device_port: 0x13
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp37
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x10
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x10
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x10
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x10
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x10
+                polarity:   negative
+    -  name:             38
+       switch_device:      0
+       switch_device_port: 0x15
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp38
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x20
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x20
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x20
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x20
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x20
+                polarity:   negative
+    -  name:             39
+       switch_device:      0
+       switch_device_port: 0x16
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp39
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x40
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x40
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x40
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x40
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x40
+                polarity:   negative
+    -  name:             40
+       switch_device:      0
+       switch_device_port: 0x18
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp40
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x00
+                bitmask:    0x80
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x80
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x02
+                bitmask:    0x80
+             sfpp_mod_present:
+                device:     gpio4
+                register:   0x04
+                bitmask:    0x80
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x04
+                bitmask:    0x80
+                polarity:   negative
+    -  name:             41
+       switch_device:      0
+       switch_device_port: 0x19
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp41
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x01
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0B
+                bitmask:    0x01
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x01
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x01
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x01
+                polarity:   negative
+    -  name:             42
+       switch_device:      0
+       switch_device_port: 0x1b
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp42
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x02
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0B
+                bitmask:    0x02
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x02
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x02
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x02
+                polarity:   negative
+    -  name:             43
+       switch_device:      0
+       switch_device_port: 0x1c
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp43
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x04
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0B
+                bitmask:    0x04
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x04
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x04
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x04
+                polarity:   negative
+    -  name:             44
+       switch_device:      0
+       switch_device_port: 0x1e
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp44
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x08
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0B
+                bitmask:    0x08
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x08
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x08
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x08
+                polarity:   negative
+    -  name:             45
+       switch_device:      0
+       switch_device_port: 0x1f
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp45
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x10
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0B
+                bitmask:    0x10
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x10
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x10
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x10
+                polarity:   negative
+    -  name:             46
+       switch_device:      0
+       switch_device_port: 0x21
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp46
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x20
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0B
+                bitmask:    0x20
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x20
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x20
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x20
+                polarity:   negative
+    -  name:             47
+       switch_device:      0
+       switch_device_port: 0x22
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp47
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x40
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0A
+                bitmask:    0x40
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x40
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x40
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x40
+                polarity:   negative
+    -  name:             48
+       switch_device:      0
+       switch_device_port: 0x28
+       pluggable:          True
+       connector:          SFP_PLUS
+       max_speed:          10000
+       speeds:             [1000,10000]  # supported speeds in Mb/S
+       capabilities:       [enet1G, enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       module_eeprom:      sfpp48
+       module_signals:         # device - hex address - bit mask
+             sfpp_tx_disable:
+                device:     gpio4
+                register:   0x01
+                bitmask:    0x80
+             sfpp_tx_fault:
+                device:     cpld3
+                register:   0x0B
+                bitmask:    0x80
+             sfpp_rx_loss:
+                device:     gpio4
+                register:   0x03
+                bitmask:    0x80
+             sfpp_mod_present:
+                device:     gpio5
+                register:   0x00
+                bitmask:    0x80
+                polarity:   negative
+             sfpp_interrupt:
+                device:     cpld3
+                register:   0x05
+                bitmask:    0x80
+                polarity:   negative
+    -  name:             49
+       switch_device:      0
+       switch_device_port: 0x24
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [49-1,49-2,49-3,49-4]
+       supported_modules:  [TBD]
+       module_eeprom:      qsfp28p49
+       module_signals:
+            qsfp28p_reset:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x10
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     gpio5
+                register:   0x02
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_int:
+                device:     cpld3
+                register:   0x13
+                bitmask:    0x01
+                polarity:   negative
+            qsfp28p_lp_mode:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x01
+            qsfp28p_interrupt:
+                device:     cpld3
+                register:   0x12
+                bitmask:    0x01
+    -  name:             "49-1"
+       switch_device:      0
+       switch_device_port: 0x26
+       parent_port:        49
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "49-2"
+       switch_device:      0
+       switch_device_port: 0x25
+       parent_port:        49
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "49-3"
+       switch_device:      0
+       switch_device_port: 0x27
+       parent_port:        49
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "49-4"
+       switch_device:      0
+       switch_device_port: 0x24
+       parent_port:        49
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
+    -  name:             50
+       switch_device:      0
+       switch_device_port: 0x2c
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [50-1,50-2,50-3,50-4]
+       supported_modules:  [TBD]
+       module_eeprom:      qsfp28p50
+       module_signals:
+            qsfp28p_reset:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x20
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     gpio5
+                register:   0x02
+                bitmask:    0x02
+                polarity:   negative
+            qsfp28p_int:
+                device:     cpld3
+                register:   0x13
+                bitmask:    0x04
+            qsfp28p_lp_mode:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x02
+            qsfp28p_interrupt:
+                device:     cpld3
+                register:   0x12
+                bitmask:    0x04
+    -  name:             "50-1"
+       switch_device:      0
+       switch_device_port: 0x2d
+       parent_port:        50
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "50-2"
+       switch_device:      0
+       switch_device_port: 0x2e
+       parent_port:        50
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "50-3"
+       switch_device:      0
+       switch_device_port: 0x2c
+       parent_port:        50
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "50-4"
+       switch_device:      0
+       switch_device_port: 0x2f
+       parent_port:        50
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
+    -  name:             51
+       switch_device:      0
+       switch_device_port: 0x802c
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [51-1,51-2,51-3,51-4]
+       supported_modules:  [TBD]
+       module_eeprom:      qsfp28p51
+       module_signals:
+            qsfp28p_reset:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x40
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     gpio5
+                register:   0x02
+                bitmask:    0x04
+                polarity:   negative
+            qsfp28p_int:
+                device:     cpld3
+                register:   0x13
+                bitmask:    0x10
+            qsfp28p_lp_mode:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x04
+            qsfp28p_interrupt:
+                device:     cpld3
+                register:   0x12
+                bitmask:    0x10
+    -  name:             "51-1"
+       switch_device:      0
+       switch_device_port: 0x802e
+       parent_port:        51
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "51-2"
+       switch_device:      0
+       switch_device_port: 0x802d
+       parent_port:        51
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "51-3"
+       switch_device:      0
+       switch_device_port: 0x802f
+       parent_port:        51
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "51-4"
+       switch_device:      0
+       switch_device_port: 0x802c
+       parent_port:        51
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
+    -  name:             52
+       switch_device:      0
+       switch_device_port: 0x8024
+       pluggable:          True
+       connector:          QSFP28
+       max_speed:          100000
+       speeds:             [40000,100000]
+       capabilities:       [enet100G, split_4]
+       subports:           [52-1,52-2,52-3,52-4]
+       supported_modules:  [TBD]
+       module_eeprom:      qsfp28p52
+       module_signals:
+            qsfp28p_reset:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x80
+                polarity:   negative
+            qsfp28p_mod_present:
+                device:     gpio5
+                register:   0x02
+                bitmask:    0x08
+                polarity:   negative
+            qsfp28p_int:
+                device:     cpld3
+                register:   0x13
+                bitmask:    0x02
+            qsfp28p_lp_mode:
+                device:     gpio5
+                register:   0x01
+                bitmask:    0x08
+            qsfp28p_interrupt:
+                device:     cpld3
+                register:   0x12
+                bitmask:    0x02
+    -  name:             "52-1"
+       switch_device:      0
+       switch_device_port: 0x8025
+       parent_port:        52
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "52-2"
+       switch_device:      0
+       switch_device_port: 0x8026
+       parent_port:        52
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "52-3"
+       switch_device:      0
+       switch_device_port: 0x8024
+       parent_port:        52
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "52-4"
+       switch_device:      0
+       switch_device_port: 0x8027
+       parent_port:        52
+       pluggable:          False
+       connector:          QSFP28
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
+    -  name:             53
+       switch_device:      0
+       switch_device_port: 0x8028
+       pluggable:          True
+       connector:          QSFP_PLUS
+       max_speed:          40000
+       speeds:             [40000]
+       capabilities:       [enet40G, split_4]
+       subports:           [53-1,53-2,53-3,53-4]
+       supported_modules:  [TBD]
+       module_eeprom:      qsfpp53
+       module_signals:
+            qsfpp_reset:
+                device:     gpio5
+                register:   0x03
+                bitmask:    0x04
+                polarity:   negative
+            qsfpp_mod_present:
+                device:     gpio5
+                register:   0x02
+                bitmask:    0x10
+                polarity:   negative
+            qsfpp_int:
+                device:     cpld3
+                register:   0x13
+                bitmask:    0x08
+            qsfpp_lp_mode:
+                device:     gpio5
+                register:   0x03
+                bitmask:    0x01
+            qsfpp_interrupt:
+                device:     cpld3
+                register:   0x12
+                bitmask:    0x08
+    -  name:             "53-1"
+       switch_device:      0
+       switch_device_port: 0x8029
+       parent_port:        53
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "53-2"
+       switch_device:      0
+       switch_device_port: 0x802a
+       parent_port:        53
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "53-3"
+       switch_device:      0
+       switch_device_port: 0x8028
+       parent_port:        53
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "53-4"
+       switch_device:      0
+       switch_device_port: 0x802b
+       parent_port:        53
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4
+    -  name:             54
+       switch_device:      0
+       switch_device_port: 0x8020
+       pluggable:          True
+       connector:          QSFP_PLUS
+       max_speed:          40000
+       speeds:             [40000]
+       capabilities:       [enet40G, split_4]
+       subports:           [54-1,54-2,54-3,54-4]
+       supported_modules:  [TBD]
+       module_eeprom:      qsfpp54
+       module_signals:
+            qsfpp_reset:
+                device:     gpio5
+                register:   0x03
+                bitmask:    0x08
+                polarity:   negative
+            qsfpp_mod_present:
+                device:     gpio5
+                register:   0x02
+                bitmask:    0x20
+                polarity:   negative
+            qsfpp_int:
+                device:     cpld3
+                register:   0x13
+                bitmask:    0x20
+            qsfpp_lp_mode:
+                device:     gpio5
+                register:   0x03
+                bitmask:    0x02
+            qsfpp_interrupt:
+                device:     cpld3
+                register:   0x12
+                bitmask:    0x20
+    -  name:             "54-1"
+       switch_device:      0
+       switch_device_port: 0x8021
+       parent_port:        54
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      1
+    -  name:             "54-2"
+       switch_device:      0
+       switch_device_port: 0x8022
+       parent_port:        54
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      2
+    -  name:             "54-3"
+       switch_device:      0
+       switch_device_port: 0x8020
+       parent_port:        54
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      3
+    -  name:             "54-4"
+       switch_device:      0
+       switch_device_port: 0x8023
+       parent_port:        54
+       pluggable:          False
+       connector:          QSFP_PLUS
+       max_speed:          10000
+       speeds:             [10000]
+       capabilities:       [enet10G]
+       subports:           []
+       supported_modules:  [TBD]
+       subport_number:      4

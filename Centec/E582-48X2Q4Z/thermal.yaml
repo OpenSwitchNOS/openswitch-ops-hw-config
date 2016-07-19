@@ -1,0 +1,94 @@
+# Copyright (C) 2016 Centec Networks (suzhou) Co., Ltd. All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Thermal Description File for Centec E582 48X2Q4Z Switch
+
+manufacturer:    Centec
+product_name:    E582-48X2Q4Z
+version:         null
+
+# import or reference devices list here
+
+thermal_info:
+      num_sensors:      3
+      polling_period:   5000   # 5 seconds
+      auto_shutdown:    True   # Auto shutdown if emergency alarm
+
+
+
+sensors:
+     -  number:        1
+        location:     "front"
+        device:       tmp2
+        sensor_type:  lm75
+        alarm_thresholds:
+              emergency_on:         80
+              emergency_off:        78
+              critical_on:          65
+              critical_off:         63
+              max_on:               57.7
+              max_off:              52.7
+              min:                   0
+              low_crit:            -10
+        fan_thresholds:
+              max_on:               57.7     #  Set fan speed to MAX
+              max_off:              52.7
+              fast_on:              53         # Set fan speed to FAST
+              fast_off:             47.7
+              medium_on:            49.5       # Set fan speed to BRISK
+              medium_off:           42.7
+
+
+     -  number:        2
+        location:     "back"
+        device:       tmp1
+        sensor_type:  lm75
+        thresholds:
+        alarm_thresholds:
+              emergency_on:         80
+              emergency_off:        78
+              critical_on:          65
+              critical_off:         63
+              max_on:               57.7
+              max_off:              52.7
+              min:                   0
+              low_crit:            -10
+        fan_thresholds:
+              max_on:               57.7     #  Set fan speed to MAX
+              max_off:              52.7
+              fast_on:              53         # Set fan speed to FAST
+              fast_off:             47.7
+              medium_on:            49.5       # Set fan speed to BRISK
+              medium_off:           42.7
+
+     -  number:        3
+        location:     "cpu"
+        device:       tmp3
+        sensor_type:  lm75
+        alarm_thresholds:
+              emergency_on:         80
+              emergency_off:        78
+              critical_on:          65
+              critical_off:         63
+              max_on:               57.7
+              max_off:              52.7
+              min:                   0
+              low_crit:            -10
+        fan_thresholds:
+              max_on:               57.7     #  Set fan speed to MAX
+              max_off:              52.7
+              fast_on:              53         # Set fan speed to FAST
+              fast_off:             47.7
+              medium_on:            49.5       # Set fan speed to BRISK
+              medium_off:           42.7
