@@ -1871,8 +1871,8 @@ ports:
        connector:          QSFP28
        max_speed:          100000
        speeds:             [40000,100000]
-       capabilities:       [enet40G, enet100G,split_4]
-       subports:           []
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [29-1,29-2,29-3,29-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p29
        module_signals:
@@ -1950,8 +1950,8 @@ ports:
        connector:          QSFP28
        max_speed:          100000
        speeds:             [40000,100000]
-       capabilities:       [enet40G, enet100G,split_4]
-       subports:           []
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [30-1,30-2,30-3,30-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p30
        module_signals:
@@ -2029,8 +2029,8 @@ ports:
        connector:          QSFP28
        max_speed:          100000
        speeds:             [40000,100000]
-       capabilities:       [enet40G, enet100G,split_4]
-       subports:           []
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [31-1,31-2,31-3,31-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p31
        module_signals:
@@ -2108,8 +2108,8 @@ ports:
        connector:          QSFP28
        max_speed:          100000
        speeds:             [40000,100000]
-       capabilities:       [enet40G, enet100G,split_4]
-       subports:           []
+       capabilities:       [enet40G, enet100G, split_4]
+       subports:           [32-1,32-2,32-3,32-4]
        supported_modules:  [TBD]
        module_eeprom:      qsfp28p32
        module_signals:
