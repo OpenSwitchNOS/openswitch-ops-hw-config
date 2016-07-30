@@ -129,7 +129,7 @@ static void operator >> (const YAML::Node &node, i2c_op &op)
         op.register_address = 0;
     } else {
         op.set_register = true;
-        op.register_address = (unsigned char)strtoul(str.c_str(), 0, 0);
+        op.register_address = (unsigned short)strtoul(str.c_str(), 0, 0);
     }
 
     vector<unsigned char> bytes;
@@ -275,7 +275,7 @@ static void operator >> (const YAML::Node &node, i2c_bit_op &op)
     op.device = strdup(str.c_str());
 
     node["register"] >> str;
-    op.register_address = (unsigned char)strtoul(str.c_str(), 0, 0);
+    op.register_address = (unsigned short)strtoul(str.c_str(), 0, 0);
 
     node["bitmask"] >> str;
     op.bit_mask = (unsigned char)strtoul(str.c_str(), 0, 0);
@@ -743,6 +743,12 @@ static void operator >> (const YAML::Node &node, YamlFan &fan)
     op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
     node["speed"] >> *op;
     fan.fan_speed = op;
+
+    if (const YAML::Node *pNode = node.FindValue("speed_pwm")) {
+        op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        fan.fan_speed_pwm = op;
+    }
 }
 
 static void operator >> (const YAML::Node &node, vector<YamlFan> &fans)
@@ -885,9 +891,9 @@ static void operator >> (const YAML::Node &node, YamlQosInfo &qos_info)
     node["default_qos_trust"] >> str;
     qos_info.trust = strdup(str.c_str());
     if (qos_info.trust != NULL &&
-            str.compare("none") != 0 &&
-            str.compare("cos") != 0 &&
-            str.compare("dscp") != 0) {
+            strncmp(qos_info.trust, "none", QOS_MAX_STRING_LENGTH) != 0 &&
+            strncmp(qos_info.trust, "cos", QOS_MAX_STRING_LENGTH) != 0 &&
+            strncmp(qos_info.trust, "dscp", QOS_MAX_STRING_LENGTH) != 0) {
         std::cout << "config-yaml|ERR|Unexpected qos trust: "
                 << qos_info.trust << std::endl;
     }
@@ -903,14 +909,14 @@ static void operator >> (const YAML::Node &node, YamlScheduleProfileEntry &entry
     node["algorithm"] >> str;
     entry.algorithm = strdup(str.c_str());
     if (entry.algorithm != NULL &&
-            str.compare("strict") != 0 &&
-            str.compare("dwrr") != 0) {
+            strncmp(entry.algorithm, "strict", QOS_MAX_STRING_LENGTH) != 0 &&
+            strncmp(entry.algorithm, "dwrr", QOS_MAX_STRING_LENGTH) != 0) {
         std::cout << "config-yaml|ERR|Unexpected algorithm: "
                 << entry.algorithm << std::endl;
     }
 
     /* Only check for weight if "dwrr" algorithm */
-    if (str.compare("dwrr") == 0) {
+    if (strncmp(entry.algorithm, "dwrr", QOS_MAX_STRING_LENGTH) == 0) {
         node["weight"] >> str;
         entry.weight = strtol(str.c_str(), 0, 0);
         if (entry.weight < 1) {
@@ -986,9 +992,9 @@ static void operator >> (const YAML::Node &node, YamlCosMapEntry &entry)
     node["color"] >> str;
     entry.color = strdup(str.c_str());
     if (entry.color != NULL &&
-            str.compare("green") != 0 &&
-            str.compare("yellow") != 0 &&
-            str.compare("red") != 0) {
+            strncmp(entry.color, "green", QOS_MAX_STRING_LENGTH) != 0 &&
+            strncmp(entry.color, "yellow", QOS_MAX_STRING_LENGTH) != 0 &&
+            strncmp(entry.color, "red", QOS_MAX_STRING_LENGTH) != 0) {
         std::cout << "config-yaml|ERR|Unexpected color: "
                 << entry.color << std::endl;
     }
@@ -1018,9 +1024,9 @@ static void operator >> (const YAML::Node &node, YamlDscpMapEntry &entry)
     node["color"] >> str;
     entry.color = strdup(str.c_str());
     if (entry.color != NULL &&
-            str.compare("green") != 0 &&
-            str.compare("yellow") != 0 &&
-            str.compare("red") != 0) {
+            strncmp(entry.color, "green", QOS_MAX_STRING_LENGTH) != 0 &&
+            strncmp(entry.color, "yellow", QOS_MAX_STRING_LENGTH) != 0 &&
+            strncmp(entry.color, "red", QOS_MAX_STRING_LENGTH) != 0) {
         std::cout << "config-yaml|ERR|Unexpected color: "
                 << entry.color << std::endl;
     }
@@ -1938,14 +1944,14 @@ yaml_parse_fru(YamlConfigHandle handle, const char *subsyst)
     yfile = yaml_find_file(handle, subsyst, YAML_FRU_NAME);
 
     if (yfile == NULL) {
-        return(FRU_YAML_NOT_FOUND);
+        return(-1);
     }
 
     string file_name = sub->dir_name + string(yfile->filename);
 
     ifstream fin(file_name.c_str());
     if (fin.fail()) {
-        return(FRU_YAML_NOT_FOUND);
+        return(-1);
     }
 
     try {
@@ -2215,11 +2221,6 @@ yaml_parse_acl(YamlConfigHandle handle, const char *subsyst)
 
     ifstream fin(file_name.c_str());
     if (fin.fail()) {
-        /* If acl.yaml file not found, return a limited init value
-         *  to allow system init */
-        sub->acl_info.max_acls = 1;
-        sub->acl_info.max_aces = 1;
-        sub->acl_info.max_aces_per_acl = 1;
         return -1;
     }
 
@@ -2387,9 +2388,17 @@ yaml_init_devices(YamlConfigHandle handle, const char *subsystem)
 
     for (size_t idx = 0; idx < sub->init_ops.size(); idx++) {
         int rc;
+        i2c_op **ops = (i2c_op **)malloc(sizeof(i2c_op *) * 2);
         i2c_op op = sub->init_ops.at(idx);
+        const YamlDevice *device;
+        ops[0] = &op;
+        ops[1] = NULL;
 
-        rc = i2c_do_op(handle, subsystem, &op);
+        device = yaml_find_device(handle, subsystem, op.device);
+
+        rc = i2c_execute(handle, subsystem, device, ops);
+
+        free(ops);
     }
 
     return (0);

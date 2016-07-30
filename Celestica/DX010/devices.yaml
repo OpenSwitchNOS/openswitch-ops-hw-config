@@ -1,0 +1,206 @@
+# Copyright (C) 2016 Celestica Inc.
+# All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Devices Description File for Celestica DX010 Switch
+
+manufacturer:    Celestica
+product_name:    DX010
+version:         '1'
+
+buses:
+        # same i2c bus as above but for smbus operations
+    -   name:       i2c_1
+        dev_name:   /dev/i2c-2
+        smbus:      true
+        # cpld accessed through LPC bus; requires cpld driver
+    -   name:       cpldev_1
+        dev_name:   /dev/cpld
+        smbus:      false
+
+devices:    # just the devices relevant to platform code are listed
+    -   name:       i2c_master_sel
+        bus:        i2c_1
+        dev_type:   pca9541
+        address:    0x70
+    -   name:       i2c_mux1
+        bus:        i2c_1
+        dev_type:   pca9548
+        address:    0x73
+    -   name:       i2c_mux2
+        bus:        i2c_1
+        dev_type:   pca9548
+        address:    0x71
+    -   name:       gpio_mux
+        bus:        i2c_1
+        dev_type:   pca9506
+        address:    0x20
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x80 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    # Fan controllers
+    -   name:       emc2305_1
+        bus:        i2c_1
+        dev_type:   emc2305
+        address:    0x4D
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x08 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    -   name:       emc2305_2
+        bus:        i2c_1
+        dev_type:   emc2305
+        address:    0x2E
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x08 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    # Temperature sensors
+    -   name:       tmp_swt_inlet
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x49
+        pre:
+            - device:   i2c_mux2
+              register: 0x00
+              data:     [ 0x10 ]
+        post:
+            - device:   i2c_mux2
+              register: 0x00
+              data:     [ 0x00 ]
+    -   name:       tmp_swt_onboard
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x4A
+        pre:
+            - device:   i2c_mux2
+              register: 0x00
+              data:     [ 0x20 ]
+        post:
+            - device:   i2c_mux2
+              register: 0x00
+              data:     [ 0x00 ]
+    -   name:       tmp_cpu_onboard
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x48
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x10 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    -   name:       tmp_cpu_inlet
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x4E
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x20 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    # Power supply units
+    -   name:       psu1
+        bus:        i2c_1
+        dev_type:   power_supply
+        address:    0x5A
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x01 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    -   name:       psu2
+        bus:        i2c_1
+        dev_type:   power_supply
+        address:    0x5B
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x02 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    # EEPROM
+    -   name:       fru_eeprom
+        bus:        i2c_1
+        dev_type:   eeprom
+        address:    0x50
+        pre:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x04 ]
+        post:
+            - device:   i2c_mux1
+              register: 0x00
+              data:     [ 0x00 ]
+    # CPLD devices
+    -   name:       cpld_io
+        bus:        cpldev_1
+        dev_type:   cpld
+        address:    0x100
+    -   name:       cpld_sfpp
+        bus:        cpldev_1
+        dev_type:   cpld
+        address:    0x50
+    -   name:       cpld_sfpp_dom
+        bus:        cpldev_1
+        dev_type:   cpld
+        address:    0x51
+init:
+    - device:   cpld_io
+      register: 0x123
+      data:     [ 0xF2 ]
+    - device:   i2c_master_sel
+      register: 0x01
+      data:     [ 0x04 ]
+    - device:   cpld_io
+      register: 0x252
+      data:     [ 0x00 ]
+    - device:   cpld_io
+      register: 0x253
+      data:     [ 0x00 ]
+    - device:   cpld_io
+      register: 0x2D2
+      data:     [ 0x00 ]
+    - device:   cpld_io
+      register: 0x2D3
+      data:     [ 0x00 ]
+    - device:   cpld_io
+      register: 0x3D2
+      data:     [ 0x00 ]
+    - device:   cpld_io
+      register: 0x3D3
+      data:     [ 0x00 ]
