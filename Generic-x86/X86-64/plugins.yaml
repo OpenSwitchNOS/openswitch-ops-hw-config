@@ -50,3 +50,4 @@
 - libqos_plugin.so
 - libcopp_plugin.so
 - libswitchd_stp_plugin
+- libswitchd_mac_learning_plugin
