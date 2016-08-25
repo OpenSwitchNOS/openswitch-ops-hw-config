@@ -340,6 +340,7 @@ typedef struct {
     char        *name;      /*!< Name identified of the Fan */
     i2c_bit_op  *fan_fault; /*!< op values for accessing fan fault */
     i2c_bit_op  *fan_speed; /*!< op values for accessing fan speed */
+    i2c_bit_op  *fan_speed_pwm; /*!< op values for setting fan speed */
 } YamlFan;
 
 /************************************************************************//**
