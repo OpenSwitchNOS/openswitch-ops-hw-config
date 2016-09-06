@@ -1,3 +1,4 @@
+
 /*
  * (c) Copyright 2015-2016 Hewlett Packard Enterprise Development LP
  *
@@ -461,7 +462,7 @@ static void operator >> (const YAML::Node &node, YamlPort &port)
 
     strs.clear();
 
-    if (port.pluggable) {
+    if (port.pluggable && node.FindValue("module_eeprom")) {
         node["module_eeprom"] >> str;
         port.module_eeprom = strdup(str.c_str());
 
@@ -510,12 +511,26 @@ static void operator >> (const YAML::Node &node, YamlLedTypeSettings
 {
     string str;
 
-    node["OFF"] >> str;
-    settings.off = (unsigned char)strtol(str.c_str(), 0, 0);
-    node["ON"] >> str;
-    settings.on = (unsigned char)strtol(str.c_str(), 0, 0);
-    node["FLASHING"] >> str;
-    settings.flashing = (unsigned char)strtol(str.c_str(), 0, 0);
+    if (const YAML::Node *pNode = node.FindValue("OFF")) {
+        *pNode >> str;
+        settings.off = strdup(str.c_str());
+    } else {
+        settings.off = NULL;
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("ON")) {
+        *pNode >> str;
+        settings.on = strdup(str.c_str());
+    } else {
+        settings.on = NULL;
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("FLASHING")) {
+        *pNode >> str;
+        settings.flashing = strdup(str.c_str());
+    } else {
+        settings.flashing = NULL;
+    }
 }
 
 static void operator >> (const YAML::Node &node, YamlLedType &led_type)
@@ -541,11 +556,22 @@ static void operator >> (const YAML::Node &node, YamlLed &led)
     node["name"] >> str;
     led.name = strdup(str.c_str());
 
+   if (const YAML::Node *pNode = node.FindValue("dev_name")) {
+        *pNode >> str;
+        led.dev_name = strdup(str.c_str());
+    } else {
+        led.dev_name = NULL;
+    }
+
     node["led_type"] >> str;
     led.type = strdup(str.c_str());
 
-    node["led_access"] >> *op;
-    led.led_access = op;
+    if (const YAML::Node *pNode = node.FindValue("led_access")) {
+        *pNode >> *op;
+        led.led_access = op;
+    } else {
+        led.led_access = NULL;
+    }
 }
 
 static void operator >> (const YAML::Node &node, vector<YamlLedType> &led_types)
@@ -566,14 +592,42 @@ static void operator >> (const YAML::Node &node, vector<YamlLed> &leds)
     }
 }
 
+static void operator >> (const YAML::Node &node, YamlLedValues &values)
+{
+    string str;
+
+    node["OFF"] >> str;
+    values.off = strdup(str.c_str());
+    node["GOOD"] >> str;
+    values.good = strdup(str.c_str());
+    node["FAULT"] >> str;
+    values.fault = strdup(str.c_str());
+}
+
 static void operator >> (const YAML::Node &node, YamlPsuInfo &psu_info)
 {
+    string str;
+
     node["number_psus"] >> psu_info.number_psus;
     node["polling_period"] >> psu_info.polling_period;
+    if (const YAML::Node *pNode = node.FindValue("global_led_name")) {
+        *pNode >> str;
+        psu_info.global_led_name = strdup(str.c_str());
+    }
+    if (const YAML::Node *pNode = node.FindValue("global_led")) {
+        i2c_bit_op *op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        psu_info.global_led_bit_op = op;
+    }
+    if (const YAML::Node *pNode = node.FindValue("led_values")) {
+        *pNode >> psu_info.led_values;
+    }
 }
 
 static void operator >> (const YAML::Node &node, YamlPsu &psu)
 {
+    string str;
+
     node["number"] >> psu.number;
     if (const YAML::Node *pNode = node.FindValue("psu_present")) {
         i2c_bit_op *op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
@@ -595,6 +649,17 @@ static void operator >> (const YAML::Node &node, YamlPsu &psu)
         psu.psu_output_ok = op;
     } else {
         psu.psu_output_ok = NULL;
+    }
+    if (const YAML::Node *pNode = node.FindValue("plugable")) {
+        *pNode >> psu.plugable;
+    } else {
+        psu.plugable = true;
+    }
+    if (const YAML::Node *pNode = node.FindValue("led_name")) {
+        *pNode >> str;
+        psu.led_name = strdup(str.c_str());
+    } else {
+        psu.led_name = NULL;
     }
 }
 
@@ -661,18 +726,6 @@ static void operator >> (const YAML::Node &node, YamlFanControlType &control)
     }
 }
 
-static void operator >> (const YAML::Node &node, YamlLedValues &values)
-{
-    string str;
-
-    node["OFF"] >> str;
-    values.off = strtol(str.c_str(), 0, 0);
-    node["GOOD"] >> str;
-    values.good = strtol(str.c_str(), 0, 0);
-    node["FAULT"] >> str;
-    values.fault = strtol(str.c_str(), 0, 0);
-}
-
 static void operator >> (const YAML::Node &node, YamlDirectionValues &values)
 {
     string str;
@@ -702,14 +755,22 @@ static void operator >> (const YAML::Node &node, YamlSpeedSettings &settings)
 
 static void operator >> (const YAML::Node &node, YamlFanInfo &info)
 {
-    i2c_bit_op *op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+    string str;
+    i2c_bit_op *op = NULL;
 
     node["number_fan_frus"] >> info.number_fan_frus;
     node["fan_speed_control_type"] >> info.fan_speed_control_type;
-    node["fan_speed_control"] >> *op;
-    info.fan_speed_control = op;
+    if (const YAML::Node *pNode = node.FindValue("fan_speed_control")) {
+        op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        info.fan_speed_control = op;
+    }
+
     node["fan_speed_min"] >> info.fan_speed_min;
-    node["fan_speed_settings"] >> info.fan_speed_settings;
+    if (const YAML::Node *pNode = node.FindValue("fan_speed_settings")) {
+        *pNode >> info.fan_speed_settings;
+    }
+
     node["fan_direction"] >> info.direction;
 
     if (const YAML::Node *pNode = node.FindValue("fan_direction_control")) {
@@ -725,24 +786,52 @@ static void operator >> (const YAML::Node &node, YamlFanInfo &info)
         *pNode >> info.direction_control_values;
     }
 
-    node["fan_direction_values"] >> info.direction_values;
-    node["fan_speed_multiplier"] >> info.fan_speed_multiplier;
-    node["fan_led_values"] >> info.fan_led_values;
+    if (const YAML::Node *pNode = node.FindValue("fan_direction_values")) {
+        *pNode >> info.direction_values;
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("fan_speed_multiplier")) {
+        *pNode >> info.fan_speed_multiplier;
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("global_led_name")) {
+        *pNode >> str;
+        info.global_led_name = strdup(str.c_str());
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("global_led")) {
+        op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        info.global_led = op;
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("fan_led_values")) {
+        *pNode >> info.fan_led_values;
+    }
 }
 
 static void operator >> (const YAML::Node &node, YamlFan &fan)
 {
     string str;
-    i2c_bit_op *op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+    i2c_bit_op *op = NULL;
 
     node["name"] >> str;
     fan.name = strdup(str.c_str());
-    node["fault"] >> *op;
-    fan.fan_fault = op;
+    if (const YAML::Node *pNode = node.FindValue("fault")) {
+        op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        fan.fan_fault = op;
+    } else {
+        fan.fan_fault = NULL;
+    }
 
-    op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
-    node["speed"] >> *op;
-    fan.fan_speed = op;
+    if (const YAML::Node *pNode = node.FindValue("speed")) {
+        op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        fan.fan_speed = op;
+    } else {
+        fan.fan_speed = NULL;
+    }
 }
 
 static void operator >> (const YAML::Node &node, vector<YamlFan> &fans)
@@ -756,15 +845,33 @@ static void operator >> (const YAML::Node &node, vector<YamlFan> &fans)
 
 static void operator >> (const YAML::Node &node, YamlFanFru &fan_fru)
 {
-    i2c_bit_op *op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+    string str;
+    i2c_bit_op *op = NULL;
 
     node["number"] >> fan_fru.number;
-    node["fan_leds"] >> *op;
-    fan_fru.fan_leds = op;
 
-    op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
-    node["fan_direction_detect"] >> *op;
-    fan_fru.fan_direction_detect = op;
+    if (const YAML::Node *pNode = node.FindValue("led_name")) {
+        *pNode >> str;
+        fan_fru.led_name = strdup(str.c_str());
+    } else {
+        fan_fru.led_name = NULL;
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("fan_leds")) {
+        op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        fan_fru.fan_leds = op;
+    } else {
+        fan_fru.fan_leds = NULL;
+    }
+
+    if (const YAML::Node *pNode = node.FindValue("fan_direction_detect")) {
+        op = (i2c_bit_op *)malloc(sizeof(i2c_bit_op));
+        *pNode >> *op;
+        fan_fru.fan_direction_detect = op;
+    } else {
+        fan_fru.fan_direction_detect = NULL;
+    }
 
     vector<YamlFan> fans;
 
@@ -1133,13 +1240,20 @@ init_info_fields(YamlSubsystem *sub)
     sub->fan_info.direction_control_values.f2b = '\0';
     sub->fan_info.direction_control_values.b2f = '\0';
     sub->fan_info.fan_speed_multiplier = 0;
-    sub->fan_info.fan_led_values.off = '\0';
-    sub->fan_info.fan_led_values.good = '\0';
-    sub->fan_info.fan_led_values.fault = '\0';
+    sub->fan_info.fan_led_values.off = NULL;
+    sub->fan_info.fan_led_values.good = NULL;
+    sub->fan_info.fan_led_values.fault = NULL;
+    sub->fan_info.global_led_name = NULL;
+    sub->fan_info.global_led = NULL;
 
     // YamlPsuInfo
     sub->psu_info.number_psus = 0;
     sub->psu_info.polling_period = 0;
+    sub->psu_info.global_led_name = NULL;
+    sub->psu_info.global_led_bit_op = NULL;
+    sub->psu_info.led_values.off = NULL;
+    sub->psu_info.led_values.good = NULL;
+    sub->psu_info.led_values.fault = NULL;
 
     // YamlLedInfo
     sub->led_info.number_leds = 0;
