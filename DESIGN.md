@@ -88,6 +88,9 @@ Power Supplies
 typedef struct {
     int         number_psus;        /* Number of power supplies */
     int         polling_period;     /* Polling period in miliseconds */
+    char        *global_led_name; /*!< name of PSU global LED */
+    i2c_bit_op  *global_led_bit_op; /*!< op values to access the LED */
+    YamlLedValues led_values; /*!< PSU LED values */
 } YamlPsuInfo;
 
 typedef struct {
@@ -95,6 +98,8 @@ typedef struct {
     i2c_bit_op  *psu_present;
     i2c_bit_op  *psu_input_ok;
     i2c_bit_op  *psu_output_ok;
+    bool        plugable;        /*!< op flag indicates if PSU is plugable. Default true */
+    char        *led_name;            /*!< op name of PSU LED */
 } YamlPsu;
 
 const YamlPsuInfo *yaml_get_psu_info(
@@ -119,13 +124,14 @@ typedef enum {
 } YamlLedTypeValue;
 
 typedef struct {
-    unsigned char off;
-    unsigned char on;
-    unsigned char flashing;
+    char *off;
+    char *on;
+    char *flashing;
 } YamlLedTypeSettings;
 
 typedef struct {
     char        *name;
+    char        *dev_name;    /*!<  LED device name identifier */
     char        *type;
     i2c_bit_op  *led_access;
 } YamlLed;
@@ -174,6 +180,7 @@ typedef struct {
     YamlDirectionValues direction_values;   /* op values to set direction */
     YamlDirectionValues direction_control_values; /* dir ctrl values */
     int                 fan_speed_multiplier; /* multiplier to set speed */
+    char                *global_led_name;   /*!< Fan LED name */
     YamlLedValues       fan_led_values;     /* Fan LED values */
 } YamlFanInfo;
 
@@ -186,6 +193,7 @@ typedef struct {
 typedef struct {
     int         number;     /* Fan FRU identifier number */
     YamlFan     **fans;     /* YamlFan pointers for fans in the FRU */
+    char        *led_name;  /*!< Name of FRU led */
     i2c_bit_op  *fan_leds;  /* op values to access the LEDs */
     i2c_bit_op  *fan_direction_detect; /* op values to set fan direction */
 } YamlFanFru;

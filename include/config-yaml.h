@@ -308,9 +308,9 @@ typedef struct {
  *    fan_info section of the fans.yaml file.
  ***************************************************************************/
 typedef struct {
-    unsigned char off;      /*!< Fan LED value of off */
-    unsigned char good;     /*!< Fan LED value of good */
-    unsigned char fault;    /*!< Fan LED value of fault */
+    char *off;      /*!< Fan LED value of off */
+    char *good;     /*!< Fan LED value of good */
+    char *fault;    /*!< Fan LED value of fault */
 } YamlLedValues;
 
 /************************************************************************//**
@@ -329,6 +329,7 @@ typedef struct {
     YamlDirectionValues direction_values;   /*!< op values to set direction */
     YamlDirectionValues direction_control_values; /*!< dir ctrl values */
     int                 fan_speed_multiplier; /*!< multiplier to set speed */
+    char                *global_led_name;   /*!< Fan LED name */
     YamlLedValues       fan_led_values;     /*!< Fan LED values */
 } YamlFanInfo;
 
@@ -349,6 +350,7 @@ typedef struct {
 typedef struct {
     int         number;     /*!< Fan FRU identifier number */
     YamlFan     **fans;     /*!< YamlFan pointers for fans in the FRU */
+    char        *led_name;  /*!< Name of FRU led */
     i2c_bit_op  *fan_leds;  /*!< op values to access the LEDs */
     i2c_bit_op  *fan_direction_detect; /*!< op values to set fan direction */
 } YamlFanFru;
@@ -360,6 +362,9 @@ typedef struct {
 typedef struct {
     int         number_psus;    /*!< Number of power supplies */
     int         polling_period; /*!< Polling period in milisecsonds */
+    char        *global_led_name; /*!< name of PSU global LED */
+    i2c_bit_op  *global_led_bit_op; /*!< op values to access the LED */
+    YamlLedValues led_values; /*!< PSU LED values */
 } YamlPsuInfo;
 
 /************************************************************************//**
@@ -371,6 +376,8 @@ typedef struct {
     i2c_bit_op  *psu_present;    /*!< op values for PSU presence */
     i2c_bit_op  *psu_input_ok;   /*!< op values for PSU input ok */
     i2c_bit_op  *psu_output_ok;  /*!< op values for PSU output ok */
+    bool        plugable;        /*!< op flag indicates if PSU is plugable. Default true */
+    char        *led_name;            /*!< op name of PSU LED */
 } YamlPsu;
 
 /************************************************************************//**
@@ -386,9 +393,9 @@ typedef enum {
  *    section of the leds.yaml file.
  ***************************************************************************/
 typedef struct {
-    unsigned char off;       /*!< Value for LED OFF setting */
-    unsigned char on;        /*!< Value for LED ON setting */
-    unsigned char flashing;  /*!< Value for LED FLASHING setting */
+    char *off;       /*!< Value for LED OFF setting */
+    char *on;        /*!< Value for LED ON setting */
+    char *flashing;  /*!< Value for LED FLASHING setting */
 } YamlLedTypeSettings;
 
 /************************************************************************//**
@@ -396,6 +403,7 @@ typedef struct {
  ***************************************************************************/
 typedef struct {
     char                *name;        /*!<  Name identifier for the LED */
+    char                *dev_name;    /*!<  LED device name identifier */
     char                *type;        /*!<  LED type */
     i2c_bit_op          *led_access;  /*!<  op values to access the LED */
 } YamlLed;
