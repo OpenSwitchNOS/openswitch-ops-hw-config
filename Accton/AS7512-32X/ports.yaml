@@ -25,8 +25,8 @@ port_info:
     max_port_speed:  100000
     max_transmission_unit: 9192
     max_lag_count:         1024
-    max_lag_member_count:  256
-    L3_port_requires_internal_VLAN: True
+    max_lag_member_count:  128
+    L3_port_requires_internal_VLAN: False
 
 #  Import or reference devices.yaml file
 
